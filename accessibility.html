@@ -11,10 +11,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
 </head>
 <body>
-
-
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <header>
-    <button class="menu-toggle" aria-label="Menu">
+    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-haspopup="true">
         <span></span>
         <span></span>
         <span></span>
@@ -25,14 +24,14 @@
         <li><a href="instructional-design.html">Instructional Design</a></li>
         <li><a href="learning.html">Learning</a></li>
         <li><a href="design.html">Design</a></li>
-        <li><a href="accessibility.html" class="active">Accessibility</a></li>
+        <li><a href="accessibility.html" class="active" aria-current="page">Accessibility</a></li>
         <li><a href="awards.html">Award Gallery</a></li>
         <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <section class="hero">
       <img src="images/hero.jpg" alt="ORB TOYS">
