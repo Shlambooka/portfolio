@@ -1,15 +1,30 @@
 body {
   font-family: 'Questrial', sans-serif;
   margin: 0;
-  background-color: #cffafa;
+  background-color: #251e1a;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  width: 100%;
   background-color: rgba(69, 193, 201, 0.95);
   z-index: 100;
 }
+
+.page-column {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: #77ae71;
+  flex: 1;
+  width: 100%;
+}
+
+/* nav bar */
 
 nav {
   max-width: 1000px;
@@ -27,7 +42,7 @@ nav ul {
 nav a {
   padding: 14.3px 20px;
   text-decoration: none;
-  color: #5a727b;
+  color: #222b2e;
   display: block;
 }
 
@@ -93,3 +108,62 @@ nav a.active {
   color: #fff;
   z-index: 1000;
 }
+
+/* Background image */
+
+.scene {
+  position: relative;
+  max-width: 1600px;
+  margin: 0 auto;
+  container-type: inline-size;
+}
+
+.scene-bg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/* Large Welcome Font */
+
+
+.welcome-headline {
+  position: absolute;
+  top: 10.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 10;
+  text-align: left;
+  width: max-content
+}
+
+.welcome-headline span {
+  display: inline;
+}
+
+.w-hi,
+.w-nicole,
+.w-title {
+  font-family: 'Bevan', serif;
+}
+
+.w-hi,
+.w-title {
+  font-weight: 400;
+}
+
+
+.w-name,
+.w-iam {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+}
+
+.w-hi      { font-size: 3cqw;  color: #45c1c9; }
+.w-name    { font-size: 2.5cqw; color: #45c1c9; }
+.welcome-headline .w-nicole  { font-size: 9.25cqw;  color: #f2683c; display: block; position: relative; top: 0.05em;}
+.w-iam     { font-size: 2.5cqw; color: #45c1c9; }
+.w-title   { font-size: 2.75cqw;  color: #45c1c9; }
+
