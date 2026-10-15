@@ -200,3 +200,31 @@ nav a.active {
 .w-iam     { font-size: 2.5cqw; color: #45c1c9; }
 .w-title   { font-size: 2.75cqw;  color: #45c1c9; }
 
+/* Speech bubble text */
+
+.speech-bubble {
+  position: absolute;
+  top: 43.5%;      /* tune to match the bubble's position in the image */
+  left: 33.5%;     /* tune */
+  width: 20%;    /* tune — width of the drawn bubble */
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5cqw;  /* scales with scene */
+  color: #5a727b;
+  text-align: center;
+}
+
+.bubble-quote {
+  font-family: 'Bevan', serif;
+  color: #f2683c;
+  font-size: 1.6em;  /* bigger than the text around it */
+  line-height: 0;    /* keeps the quotes from pushing the line height */
+}
+
+.bubble-quote.quote-1 {
+    margin-left: -1em;
+}
+
+.bubble-line.line-2 {
+  margin-left: 1em;
+}
