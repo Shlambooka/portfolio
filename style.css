@@ -228,3 +228,34 @@ nav a.active {
 .bubble-line.line-2 {
   margin-left: 1em;
 }
+
+/* Round button */
+
+.scene-button {
+  position: absolute;
+  top: 65%;        /* tune to land on the hole */
+  left: 33%;       /* tune */
+  width: 6cqw;     /* scales with the scene */
+  height: 6cqw;
+  border-radius: 50%;
+  background-color: #fb497e;  /* hot pink */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 20;
+  box-shadow: 6px 6px 2px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.arrow {
+  color: #fff;
+  font-size: 5cqw;
+  line-height: 1;
+  position: relative;
+}
+
+.scene-button:hover,
+.scene-button:focus-visible {
+  background-color: #e21a56; 
+} 
