@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Open+Sans:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-home">
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <header>
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-haspopup="true">
@@ -20,18 +20,18 @@
     </button>
     <nav>
       <ul>
-        <li><a href="index.html" class="active" aria-current="page">Welcome</a></li>
-        <li><a href="instructional-design.html">Instructional Design</a></li>
+        <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="learning.html">Learning</a></li>
+        <li><a href="knowledge.html">Knowledge</a></li>
         <li><a href="design.html">Design</a></li>
         <li><a href="accessibility.html">Accessibility</a></li>
-        <li><a href="awards.html">Award Gallery</a></li>
+        <li><a href="awards.html">Awards</a></li>
         <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
   </header>
 
-  <div class="page-column">
+  <div class="page-column page-column-home">
     <main id="main-content">
     
       <section class="scene" aria-label="Welcome scene">
@@ -42,7 +42,7 @@
                     images/scene-home-mobile-1125.png 1125w"
             sizes="100vw">
           <img 
-            src="images/scene-home-1600.webp"
+            src="images/scene-home-1600.png"
             srcset="images/scene-home-1600.png 1600w,
                     images/scene-home-3200.png 3200w"
             sizes="(max-width: 1600px) 100vw, 1600px"
@@ -58,20 +58,16 @@
           <span class="w-iam">I am a </span>
           <span class="w-title"> Visual Communicator.</span>
         </h1>
-        <!-- <p class="speech-bubble">
-          <span class="bubble-quote">“</span>
-          I delight in building immersive experiences.
-          <span class="bubble-quote">”</span>
-        </p> -->
         <p class="speech-bubble">
           <span class="bubble-quote quote-1">“</span>
           <span class="bubble-line line-1">I delight in building</span><br>
           <span class="bubble-line line-2">immersive experiences.</span>
           <span class="bubble-quote">”</span>
         </p>
-        <a href="instructional-design.html" class="scene-button" aria-label="Go to Instructional Design">
-          <span class="arrow">↙</span>
+        <a href="learning.html" class="scene-button button-learning" aria-label="Go to Learning">
+          <span class="arrow">↓</span>
         </a>
+        <span class="try-me" aria-hidden="true">TRY ME!</span>
       </section>
 
       <section class="portfolio">
