@@ -71,29 +71,6 @@ nav a.active {
   margin: 4px 0;
 }
 
-@media (max-width: 850px) {
-  .menu-toggle {
-    display: block;
-    width: 100%;
-  }
-  nav ul {
-    display: none;
-  }
-  nav.open ul {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: rgba(69, 193, 201, 0.95);
-  padding: 10px 0;
-  }
-  nav.open a {
-  text-align: center;
-  }
-}
-
 .skip-link {
   position: absolute;
   left: -9999px;
@@ -259,3 +236,62 @@ nav a.active {
 .scene-button:focus-visible {
   background-color: #e21a56; 
 } 
+
+
+/* Footer */
+
+footer {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9rem;
+  color: #222b2e;
+}
+
+
+@media (max-width: 850px) {
+  .menu-toggle {
+    display: block;
+    width: 100%;
+  }
+  nav ul {
+    display: none;
+  }
+  nav.open ul {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(69, 193, 201, 0.95);
+  padding: 10px 0;
+  }
+  nav.open a {
+  text-align: center;
+  }
+  .w-hi      { font-size: 6cqw; }
+  .w-name    { font-size: 6cqw; }
+  .welcome-headline .w-nicole  { font-size: 17cqw; }
+  .w-iam     { font-size: 6cqw; }
+  .w-title   { font-size: 5cqw; }
+  .speech-bubble {
+    font-size: 3.5cqw;
+    top: 40.5%;
+    left: 11%;
+    width: 55%
+  }
+  .scene-button {
+    top: 72%;        /* new vertical position */
+    left: 33%;       /* new horizontal position */
+    width: 16cqw;    /* was 6cqw — bigger on mobile */
+    height: 16cqw;
+  }
+  .arrow {
+  font-size: 10cqw;   /* was 5cqw */
+}
+}
