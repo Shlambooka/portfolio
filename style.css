@@ -284,8 +284,19 @@ nav a.active {
 /* Footer */
 
 footer {
-  padding: 2rem 1rem;
+  position: relative;
+  padding: 2rem 1rem 6rem;   /* top | left/right | bottom */
   text-align: center;
+}
+
+.footer-frog {
+  display: block;
+  position: absolute;
+  bottom: 30%;
+  left: 75%;
+  transform: translateX(-50%);   /* center horizontally */
+  width: 20cqw; 
+  pointer-events: none; 
 }
 
 footer p {
@@ -322,19 +333,40 @@ footer p {
   .welcome-headline .w-nicole  { font-size: 17cqw; }
   .w-iam     { font-size: 6cqw; }
   .w-title   { font-size: 5cqw; }
-  .speech-bubble {
+  .page-home .speech-bubble {
     font-size: 3.5cqw;
     top: 40.5%;
     left: 11%;
     width: 55%
   }
+  .page-learning .speech-bubble {
+    font-size: 3.5cqw;
+    top: 56.2%;
+    left: 26.5%;
+    width: 56%
+  }
   .scene-button {
-    top: 72%;        /* new vertical position */
-    left: 33%;       /* new horizontal position */
-    width: 16cqw;    /* was 6cqw — bigger on mobile */
+    width: 16cqw;   
     height: 16cqw;
+  }
+  .page-home .button-learning {
+    top: 70%;       
+    left: 32%;  
+  }
+  .page-learning .button-home {
+    top: 13%;       
+    left: 14%;  
+  }
+  .page-learning .button-knowledge {
+    top: 23%;       
+    left: 67%;
   }
   .arrow {
   font-size: 10cqw;   /* was 5cqw */
-}
+  }
+  .page-home .try-me {
+    font-size: 4cqw;
+    top: 79.4%;
+    left: 32%;
+  }
 }

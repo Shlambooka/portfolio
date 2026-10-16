@@ -35,12 +35,22 @@
     <main id="main-content">
     
       <section class="scene" aria-label="Welcome scene">
-        <img 
-          src="images/scene-learning-1600.png"
-          alt="..."
-          class="scene-bg"
-          width="1600" 
-          height="1600">
+        <picture>
+          <source 
+            media="(max-width: 850px)" 
+            srcset="images/scene-learning-mobile-750.png 750w,
+                    images/scene-learning-mobile-1125.png 1125w"
+            sizes="100vw">
+          <img 
+            src="images/scene-learning-1600.png"
+            srcset="images/scene-learning-1600.png 1600w,
+                    images/scene-learning-3200.png 3200w"
+            sizes="(max-width: 1600px) 100vw, 1600px"
+            alt=""
+            class="scene-bg"
+            width="1600" 
+            height="1600">
+        </picture>
         <p class="speech-bubble">
           <span class="bubble-quote quote-1">“</span>
           <span class="bubble-line line-1">Nicole really enjoys</span><br>
@@ -62,6 +72,7 @@
     </main>
 
     <footer>
+      <img src="images/frog-cloud.png" alt="" class="footer-frog">
       <p>&copy; 2026 Nicole Nascimento</p>
     </footer>
   </div>
