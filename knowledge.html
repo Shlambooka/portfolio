@@ -8,9 +8,9 @@
   <script src="script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Open+Sans:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-home">
   <a href="#main-content" class="skip-link">Skip to main content</a>
   <header>
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-haspopup="true">
@@ -20,37 +20,126 @@
     </button>
     <nav>
       <ul>
-        <li><a href="index.html">Welcome</a></li>
-        <li><a href="instructional-design.html">Instructional Design</a></li>
-        <li><a href="learning.html" class="active" aria-current="page">Learning</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="learning.html">Learning</a></li>
+        <li><a href="knowledge.html" class="active" aria-current="page">Knowledge</a></li>
         <li><a href="design.html">Design</a></li>
         <li><a href="accessibility.html">Accessibility</a></li>
-        <li><a href="awards.html">Award Gallery</a></li>
+        <li><a href="awards.html">Awards</a></li>
         <li><a href="resume.html">Resume</a></li>
       </ul>
     </nav>
   </header>
 
-  <main id="main-content">
+  <div class="page-column page-column-home">
+    <main id="main-content">
+    
+      <section class="scene" aria-label="Welcome scene">
+       <picture>
+          <source 
+            media="(max-width: 850px)" 
+            srcset="images/scene-home-mobile-750.png 750w,
+                    images/scene-home-mobile-1125.png 1125w"
+            sizes="100vw">
+          <img 
+            src="images/scene-home-1600.png"
+            srcset="images/scene-home-1600.png 1600w,
+                    images/scene-home-3200.png 3200w"
+            sizes="(max-width: 1600px) 100vw, 1600px"
+            alt="Illustrated landscape with rolling hills, a character, and a hole with a ladder."
+            class="scene-bg"
+            width="1600" 
+            height="1600">
+        </picture>
+        <h1 class="welcome-headline">KNOWLEDGE</h1>
+        <p class="speech-bubble">
+          <span class="bubble-quote quote-1">“</span>
+          <span class="bubble-line line-1">I delight in building</span><br>
+          <span class="bubble-line line-2">immersive experiences.</span>
+          <span class="bubble-quote">”</span>
+        </p>
+        <a href="learning.html" class="scene-button button-learning" aria-label="Go to Learning">
+          <span class="arrow">↓</span>
+        </a>
+        <span class="try-me" aria-hidden="true">TRY ME!</span>
+      </section>
 
-    <h1>Learning</h1>
+      <section class="portfolio">
+        <h2>The Reading Behind the Design</h2>
+        <p>Reading is how I do research. These books—learning science, disability, trauma, systems thinking—are the evidence base behind my design decisions: for how people actually learn, and for the people traditional training fails.</p>
+        <div class="book-stream">
+          <h3>Learning & How Minds Work</h3>
+          <p>How people actually acquire skills, and why rewards, coercion, and standardization backfire.</p>
+          <div class="book-grid">
+            <img src="https://cover.hoopladigital.com/hbg_9780738220093_270.jpeg" alt="How Children Learn by John Holt">
+            <img src="https://covers.openlibrary.org/b/isbn/9781541617155-M.jpg" alt="Book cover: Language at the Speed of Sight">
+            <img src="https://covers.openlibrary.org/b/isbn/9780465025992-M.jpg" alt="Free to Learn by Peter O. Gray">
+            <img src="https://covers.openlibrary.org/b/isbn/9781328450524-M.jpg" alt="Punished by Rewards by Alfie Kohn">
+            <img src="https://cdn.waterstones.com/bookjackets/large/9780/3933/9780393356847.jpg" alt="Rethinking School by Susan Wise Bauer">
+            <!-- <img src="https://covers.openlibrary.org/b/olid/OL3690862M-M.jpg" alt="The Well-Trained Mind by Susan Wise Bauer"> -->
+          </div>
+        </div>
 
-    <section class="hero">
-      <img src="images/hero.jpg" alt="HERO">
-      <a href="sculpture.html" class="btn" id="btn-forward"></a>
-      <a href="index.html" class="btn" id="btn-back"></a>
+        <div class="book-stream">
+          <h3>Disability, Neurodiversity & Access</h3>
+          <p>The social model of disability, neurodiversity-affirming practice, and the politics of mental health.</p>
+          <div class="book-grid">
+            <img src="https://covers.openlibrary.org/b/olid/OL36015285M-M.jpg" alt="Uniquely Human by Barry M. Prizant">
+            <img src="https://covers.openlibrary.org/b/olid/OL38323001M-M.jpg" alt="Book cover: Unmasking Autism">
+            <img src="https://covers.openlibrary.org/b/olid/OL32725624M-M.jpg" alt="Book cover: Unwell Women">
+            <img src="https://cover.hoopladigital.com/csp_9780745346724_270.jpeg" alt="Mad World: The Politics of Mental Health by Micha Frazer-Carroll">
+            <img src="https://cover.hoopladigital.com/bkb_9781626569782_270.jpeg" alt="The Body Is Not an Apology by Sonya Renee Taylor">
 
-    </section>
+          </div>
+        </div>
 
-    <section class="portfolio">
-      <!-- lightbox gallery goes here later -->
-    </section>
+        <div class="book-stream">
+          <h3>Trauma & the Learning Brain</h3>
+          <p>How trauma affects memory, attention, and engagement, and how to design for safety and pacing.</p>
+          <div class="book-grid">
+            <img src="https://covers.openlibrary.org/b/olid/OL1563764M-M.jpg" alt="Book cover: Trauma and Recovery">
+            <img src="https://covers.openlibrary.org/b/olid/OL34154862M-M.jpg" alt="Book cover: The Myth of Normal">
+            <img src="https://cdn.shopify.com/s/files/1/0024/6874/1219/products/9781785042218.jpg?v=1652550726" alt="Scattered Minds by Gabor Maté">
+            <img src="https://covers.openlibrary.org/b/olid/OL27559101M-M.jpg" alt="Book cover: The Body Keeps the Score">
+            <img src="https://covers.openlibrary.org/b/isbn/9781611803433-M.jpg" alt="When Things Fall Apart by Pema Chödrön">
+          </div>
+        </div>
 
-  </main>
+        <div class="book-stream">
+          <h3>Gender & Identity (for inclusive design)</h3>
+          <p>Gender, identity, and belonging as design constraints, not afterthoughts.</p>
+          <div class="book-grid">
+            <img src="https://covers.openlibrary.org/b/isbn/9781668017043-M.jpg" alt="Free to Be">
+            <img src="https://covers.openlibrary.org/b/olid/OL51506158M-M.jpg" alt="Who's Afraid of Gender?">
+            <img src="https://covers.openlibrary.org/b/olid/OL57761460M-M.jpg" alt="Trans History: A Graphic Novel by Alex L. Combs">
+            <img src="https://covers.openlibrary.org/b/isbn/9781785784521-M.jpg" alt="Gender: A Graphic Guide by Meg-John Barker">
+          </div>
+        </div>
 
-  <footer>
-    <p>&copy; 2026 Nicole Nascimento</p>
-  </footer>
+        <div class="book-stream">
+          <h3>Systems Thinking & Critical Analysis</h3>
+          <p>Why systems produce the problems they do, and how to design training that addresses root causes instead of symptoms.</p>
+          <div class="book-grid">
+            <img src="https://covers.openlibrary.org/b/isbn/9780374157357-M.jpg" alt="Book cover: The Dawn of Everything">
+            <img src="https://covers.openlibrary.org/b/olid/OL4260599M-M.jpg" alt="Book cover: How Europe Underdeveloped Africa">
+            <img src="https://covers.openlibrary.org/b/olid/OL32062927M-M.jpg" alt="Book cover: Bullshit Jobs">
+            <img src="https://covers.openlibrary.org/b/isbn/9780807056431-M.jpg" alt="Book cover: The Great Transformation">
+            <img src="https://images.yourcloudlibrary.com/delivery/img?type=DOCUMENTIMAGE&documentID=y1zsmr9&token=nobody" alt="Caste: The Origins of Our Discontents by Isabel Wilkerson">
+            <img src="https://covers.openlibrary.org/b/isbn/9781786090034-M.jpg" alt="Book cover: The Divide">
+            <img src="https://covers.openlibrary.org/b/olid/OL8696448M-M.jpg" alt="Caliban and the Witch by Silvia Federici">
+            <img src="https://covers.openlibrary.org/b/isbn/9780394713519-M.jpg" alt="Women, Race & Class by Angela Y. Davis">
+          </div>
+        </div>
+
+        
+      </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Nicole Nascimento</p>
+    </footer>
+  </div>
 
 </body>
 </html>

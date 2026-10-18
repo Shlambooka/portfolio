@@ -280,6 +280,28 @@ nav a.active {
   left: 75%;
 }
 
+/* BOOKS */
+.portfolio {
+  padding: 3rem 2rem;
+}
+
+.book-stream {
+  margin-bottom: 3rem;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 1.5rem;
+}
+
+.book-grid img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
 
 /* Footer */
 
