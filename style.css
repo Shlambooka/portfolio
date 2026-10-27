@@ -31,6 +31,10 @@ header {
   background-color: #3b7187;
 }
 
+.page-column-knowledge {
+  background-color: #3a3131;
+  color: #cfcfcf;
+}
 
 
 /* nav bar */
@@ -177,13 +181,13 @@ nav a.active {
 .w-name,
 .w-iam {
   font-family: 'Open Sans', sans-serif;
-  font-weight: 500;
+  font-weight: 200;
 }
 
 .w-hi      { font-size: 3cqw;  color: #45c1c9; }
-.w-name    { font-size: 2.5cqw; color: #45c1c9; }
+.w-name    { font-size: 2.75cqw; color: #45c1c9; }
 .welcome-headline .w-nicole  { font-size: 9.25cqw;  color: #f2683c; display: block; position: relative; top: 0.05em;}
-.w-iam     { font-size: 2.5cqw; color: #45c1c9; }
+.w-iam     { font-size: 2.75cqw; color: #45c1c9; }
 .w-title   { font-size: 2.75cqw;  color: #45c1c9; }
 
 /* Speech bubble text */
@@ -223,6 +227,13 @@ nav a.active {
   left: 27.5%;
   width: 30%;
   font-size: 2cqw;
+}
+
+.page-knowledge .speech-bubble {
+  top: 47%;
+  left: 54.8%;
+  width: 24%;
+  font-size: 1.7cqw;
 }
 
 
@@ -278,6 +289,16 @@ nav a.active {
 .page-learning .button-knowledge {
   top: 35%;
   left: 75%;
+}
+
+.page-knowledge .button-learning {
+  top: 50%;
+  left: 15%;
+}
+
+.page-knowledge .button-design {
+  top: 45%;
+  left: 86%;
 }
 
 /* BOOKS */
