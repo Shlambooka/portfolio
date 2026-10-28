@@ -21,6 +21,7 @@ header {
   margin: 0 auto;
   flex: 1;
   width: 100%;
+  background-color: white;
 }
 
 .page-column-home {
@@ -30,12 +31,6 @@ header {
 .page-column-learning {
   background-color: #3b7187;
 }
-
-.page-column-knowledge {
-  background-color: #3a3131;
-  color: #cfcfcf;
-}
-
 
 /* nav bar */
 
@@ -230,11 +225,24 @@ nav a.active {
 }
 
 .page-knowledge .speech-bubble {
-  top: 47%;
-  left: 54.8%;
+  top: 79.5%;
+  left: 18.5%;
   width: 24%;
   font-size: 1.7cqw;
 }
+.page-design .speech-bubble {
+  top: 21%;
+  left: 35%;
+  width: 24%;
+  font-size: 2cqw;
+}
+.page-access .speech-bubble {
+  top: 56%;
+  left: 22%;
+  width: 20%;
+  font-size: 2cqw;
+}
+
 
 
 /* Round buttons */
@@ -265,12 +273,10 @@ nav a.active {
 .scene-button:focus-visible {
   background-color: #bc1446; 
 } 
-
 .page-home .button-learning {
   top: 60.5%;        
   left: 31.5%;       
 }
-
 .page-home .try-me {
   position: absolute;
   top: 70.2%;
@@ -279,26 +285,44 @@ nav a.active {
   font-size: 1.8cqw;
   pointer-events: none;
 }
-
 .page-learning .button-home {
   top: 20%;
   left: 21%;
   transform: rotate(-11deg);
 }
-
 .page-learning .button-knowledge {
   top: 35%;
   left: 75%;
 }
-
 .page-knowledge .button-learning {
-  top: 50%;
-  left: 15%;
+  top: 55%;
+  left: 12%;
+  transform: rotate(340deg);
 }
-
 .page-knowledge .button-design {
-  top: 45%;
-  left: 86%;
+  top: 42%;
+  left: 80%;
+  transform: rotate(340deg);
+}
+.page-design .button-knowledge {
+  top: 30%;
+  left: 10%;
+  transform: rotate(120deg);
+}
+.page-design .button-accessibility {
+  top: 10%;
+  left: 80%;
+  transform: rotate(180deg);
+}
+.page-access .button-design {
+  top: 73%;
+  left: 14%;
+  transform: rotate(20deg);
+}
+.page-access .button-awards {
+  top: 11%;
+  left: 78%;
+  transform: rotate(190deg);
 }
 
 /* BOOKS */
@@ -388,6 +412,24 @@ footer p {
     left: 26.5%;
     width: 56%
   }
+  .page-knowledge .speech-bubble {
+    font-size: 3.5cqw;
+    top: 67%;
+    left: 12%;
+    width: 56%
+  }
+  .page-design .speech-bubble {
+    font-size: 3.5cqw;
+    top: 41%;
+    left: 15%;
+    width: 56%
+  }
+  .page-access .speech-bubble {
+    font-size: 3.5cqw;
+    top: 43%;
+    left: 60%;
+    width: 30%
+  }
   .scene-button {
     width: 16cqw;   
     height: 16cqw;
@@ -403,6 +445,30 @@ footer p {
   .page-learning .button-knowledge {
     top: 23%;       
     left: 67%;
+  }
+  .page-knowledge .button-learning {
+    top: 30%;       
+    left: 10%;
+  }
+  .page-knowledge .button-design {
+    top: 25%;       
+    left: 75%;
+  }
+  .page-design .button-knowledge {
+    top: 27%;       
+    left: 10%;
+  }
+  .page-design .button-accessibility {
+    top: 8%;       
+    left: 77.5%;
+  }
+  .page-access .button-design {
+    top: 77%;       
+    left: 24%;
+  }
+  .page-access .button-awards {
+    top: 8%;       
+    left: 65%;
   }
   .arrow {
   font-size: 10cqw;   /* was 5cqw */
