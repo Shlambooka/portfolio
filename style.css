@@ -349,7 +349,7 @@ nav a.active {
   transform: rotate(240deg);
 }
 
-/* BOOKS */
+/* KNOWLEDGE - BOOKS */
 .portfolio {
   padding: 3rem 2rem;
 }
@@ -372,9 +372,92 @@ nav a.active {
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
+/* DESIGN - LIGHTBOX */
+
+.portfolio {
+  margin-top: -30vh;
+  position: relative;
+  z-index: 30;
+}
+
+.design-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.design-thumb {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.design-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox-img {
+  max-width: 90vw;
+  max-height: 90vh;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 4rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+}
+
+.lightbox-prev {
+  left: 0.1rem;
+}
+
+.lightbox-next {
+  right: 0.1rem;
+}
+
 /* RESUME STYLES */
 .resume-content {
-  padding-top: 10rem; /* Pushes the text down away from the scene */
+  padding-top: 6rem; /* Pushes the text down away from the scene */
   padding-left: 2rem;
   padding-right: 2rem;
   padding-bottom: 4rem;
