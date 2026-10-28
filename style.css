@@ -32,6 +32,14 @@ header {
   background-color: #3b7187;
 }
 
+.page-column-awards {
+  background-color: #3b7187;
+}
+
+.page-column-resume {
+  background-color: white;
+}
+
 /* nav bar */
 
 nav {
@@ -242,6 +250,12 @@ nav a.active {
   width: 20%;
   font-size: 2cqw;
 }
+.page-awards .speech-bubble {
+  top: 23.5%;
+  left: 40%;
+  width: 50%;
+  font-size: 2cqw;
+}
 
 
 
@@ -324,6 +338,16 @@ nav a.active {
   left: 78%;
   transform: rotate(190deg);
 }
+.page-awards .button-accessibility {
+  top: 25%;
+  left: 3%;
+  transform: rotate(45deg);
+}
+.page-awards .button-resume {
+  top: 50%;
+  left: 72%;
+  transform: rotate(240deg);
+}
 
 /* BOOKS */
 .portfolio {
@@ -347,6 +371,89 @@ nav a.active {
   border-radius: 4px;
   box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
+
+/* RESUME STYLES */
+.resume-content {
+  padding-top: 10rem; /* Pushes the text down away from the scene */
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+  max-width: 900px; /* Keeps the text from stretching too wide on big screens */
+  margin: 0 auto;
+}
+.resume-content h1 {
+  color: #45c1c9;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.resume-content h1 span {
+  font-size: 1.2rem;
+  color: #5a727b; /* A softer color for the MSc BMC part */
+}
+.resume-content ul {
+  color: #5a727b;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  list-style-type: none;  
+  padding-left: 1.8rem;
+}
+.resume-content li strong {
+  color: #45c1c9;
+  font-weight: 600; /* Keeps it slightly bold, but you can change this */
+}
+.resume-section {
+  margin-bottom: 3rem; /* Adds space between the major sections */
+}
+
+.resume-section h2 {
+  color: #45c1c9;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #45c1c9; /* A little separator line */
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+.resume-content h3 {
+  color: #f2683c;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+ 
+.resume-content h4 {
+  color: #45c1c9;
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+.resume-content p,
+.resume-content li {
+  color: #5a727b;
+  line-height: 1.6; /* Makes it easier to read */
+}
+.resume-content p span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #f2683c;
+}
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+.job-institution {
+  font-weight: 600; /* Makes it semi-bold */
+  color: #45c1c9; /* Optional: makes it match your h2 headings */
+  margin-top: -0.5rem; /* Optional: pulls it slightly closer to the degree title above it */
+}
+
+.role-dates {
+  font-size: 0.9rem;
+  color: #5a727b;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  margin-left: 0.5rem; /* Adds a small gap before the date */
+}
+
+
 
 /* Footer */
 
@@ -430,6 +537,12 @@ footer p {
     left: 60%;
     width: 30%
   }
+  .page-awards .speech-bubble {
+    font-size: 3.5cqw;
+    top: 20%;
+    left: 10%;
+    width: 60%
+  }
   .scene-button {
     width: 16cqw;   
     height: 16cqw;
@@ -469,6 +582,14 @@ footer p {
   .page-access .button-awards {
     top: 8%;       
     left: 65%;
+  }
+  .page-awards .button-accessibility {
+    top: 35%;       
+    left: 1%;
+  }
+  .page-awards .button-resume {
+    top: 10%;       
+    left: 55%;
   }
   .arrow {
   font-size: 10cqw;   /* was 5cqw */
