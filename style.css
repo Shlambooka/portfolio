@@ -193,43 +193,85 @@ nav a.active {
 .w-iam     { font-size: 2.75cqw; color: #45c1c9; }
 .w-title   { font-size: 2.75cqw;  color: #45c1c9; }
 
-/* Speech bubble text */
+/* Characters */
+
+.scene-character {
+  position: absolute;
+  width: 20cqw;     /* adjust to match her size in the art */
+  height: auto;
+  top: 46%;      /* adjust to line her feet up with the ground */
+  left: 58%;        /* adjust to place her horizontally */
+  z-index: 5;       /* above background, below speech bubble */
+  filter: drop-shadow(0.15cqw 0.15cqw 0px rgba(0, 0, 0, 0.3));
+}
+
+/* Speech Bubble */
 
 .speech-bubble {
   position: absolute;
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  color: #5a727b;
-  text-align: center;
+  background-color: white;
+  border-radius: 2cqw; /* Scales the roundness with the scene */
+  padding: 1.5cqw 2cqw; /* Scales the inner spacing with the scene */
+  filter: drop-shadow(0.15cqw 0.15cqw 0px rgba(0, 0, 0, 0.3));
+  box-sizing: border-box; 
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .bubble-quote {
   font-family: 'Bevan', serif;
   color: #f2683c;
-  font-size: 1.6em;  
-  line-height: 0;    
+  font-size: 1.6em;   /* Keep them large */
+  line-height: 0;     /* THIS is the magic trick */
+  vertical-align: -0.1em; /* Nudge it slightly down to sit nicely */
 }
 
-.bubble-quote.quote-1 {
-    margin-left: -1em;
+.speech-bubble p {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: #5a727b;
+  text-align: left;
+  line-height: 1.5;
 }
 
-.bubble-line.line-2 {
-  margin-left: 1em;
+.speech-bubble p + p {
+  margin-top: 1em; /* Adds space between the paragraphs */
 }
 
 .page-home .speech-bubble {
-  top: 43.5%;
-  left: 33.5%;
-  width: 20%;
-  font-size: 1.5cqw;
+  top: 40%;
+  left: 28%;
+  width: 30%;
+  font-size: 1.6cqw;
+}
+.page-home .speech-bubble::after {
+  background-image: url('images/speech-bubble-tail_side.svg');
+  top: 60%;                    
+  transform: translateY(-50%) scaleX(-1) scaleY(-1);
+  right: -2cqw;              
+  left: auto;                  
+  width: 5cqw;       
+  height: 10cqw;      
 }
 
 .page-learning .speech-bubble {
   top: 60%;
   left: 27.5%;
-  width: 30%;
+  width: 50%;
   font-size: 2cqw;
+}
+.page-learning .speech-bubble::after {
+  background-image: url('images/speech-bubble-tail_side.svg');
+  top: 40%;                    
+  transform: translateY(-50%); 
+  left: -1.8cqw;              
+  width: 5cqw;       
+  height: 10cqw;    
 }
 
 .page-knowledge .speech-bubble {
@@ -374,8 +416,8 @@ nav a.active {
 
 /* DESIGN - LIGHTBOX */
 
-.portfolio {
-  margin-top: -30vh;
+.page-column-design .portfolio {
+  margin-top: -32vh;
   position: relative;
   z-index: 30;
 }
@@ -466,8 +508,9 @@ nav a.active {
 }
 .resume-content h1 {
   color: #45c1c9;
-  font-size: 2.5rem;
+  font-size: 3.25rem;
   margin-bottom: 0.5rem;
+  font-weight: 100;
 }
 .resume-content h1 span {
   font-size: 1.2rem;
@@ -490,7 +533,8 @@ nav a.active {
 
 .resume-section h2 {
   color: #45c1c9;
-  font-size: 1.5rem;
+  font-size: 2.25rem;
+  font-weight: 100;
   border-bottom: 2px solid #45c1c9; /* A little separator line */
   padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
@@ -515,6 +559,7 @@ nav a.active {
   font-size: 1.2rem;
   font-weight: 600;
   color: #f2683c;
+
 }
 .job-header {
   display: flex;
@@ -590,18 +635,54 @@ footer p {
   .welcome-headline .w-nicole  { font-size: 17cqw; }
   .w-iam     { font-size: 6cqw; }
   .w-title   { font-size: 5cqw; }
+  
+  .scene-character {
+    width: 50cqw;     /* adjust to match her size in the art */
+    height: auto;
+    top: 46%;      /* adjust to line her feet up with the ground */
+    left: 50%;        /* adjust to place her horizontally */
+  }
+
+  .speech-bubble {
+    padding: 3cqw 4cqw;              /* roughly doubles the inner spacing */
+    border-radius: 4cqw;              /* matches the roundness proportion */
+    filter: drop-shadow(0.4cqw 0.4cqw 0px rgba(0, 0, 0, 0.3));
+  }
+
+
   .page-home .speech-bubble {
     font-size: 3.5cqw;
-    top: 40.5%;
+    top: 35%;
     left: 11%;
-    width: 55%
+    width: 45%
   }
+
+  .page-home .speech-bubble::after {
+    top: 77%;               /* Attach to the bottom */
+    right: 20%;              /* Anchor to the right */
+    bottom: auto;
+    left: auto;
+    margin-top: -0.8cqw;     /* Overlap the bubble slightly */
+    transform: rotate(90deg) scaleX(-1); 
+    width: 8cqw;             /* Swap width and height */
+    height: 16cqw;           /* because it is now rotated */
+  }
+
   .page-learning .speech-bubble {
     font-size: 3.5cqw;
-    top: 56.2%;
-    left: 26.5%;
+    top: 56%;
+    left: 30%;
     width: 56%
   }
+
+  .page-learning .speech-bubble::after {
+    top: 30%;                    
+    left: -3cqw;              
+    width: 10cqw;       
+    height: 16cqw;    
+  }
+
+
   .page-knowledge .speech-bubble {
     font-size: 3.5cqw;
     top: 67%;
@@ -683,3 +764,7 @@ footer p {
     left: 32%;
   }
 }
+
+
+
+
