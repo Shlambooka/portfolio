@@ -234,6 +234,24 @@ nav a.active {
   width: 10cqw;     
   height: auto;
 }
+.page-awards .character-nicole {
+  left: 35%;
+  top: 12%;
+  width: 13cqw;     
+  height: auto;
+}
+.page-awards .character-planet {
+  left: 78%;
+  top: 8%;
+  width: 16cqw;     
+  height: auto;
+}
+.page-awards .character-rocket {
+  left: 7%;
+  top: 15.5%;
+  width: 14cqw;     
+  height: auto;
+}
 
 
 /* Speech Bubble */
@@ -352,10 +370,18 @@ nav a.active {
 }
 
 .page-awards .speech-bubble {
-  top: 23.5%;
-  left: 40%;
-  width: 50%;
+  top: 30%;
+  left: 30%;
+  width: 30%;
   font-size: 2cqw;
+}
+.page-awards .speech-bubble::after {
+  background-image: url('images/speech-bubble-tail_side.svg');
+  top: -4.5cqw;   
+  transform: scaleX(-1) translateX(-50%) rotate(-270deg); 
+  left: 60%;              
+  width: 5cqw;       
+  height: 10cqw;    
 }
 
 
@@ -445,8 +471,8 @@ nav a.active {
   transform: rotate(45deg);
 }
 .page-awards .button-resume {
-  top: 50%;
-  left: 72%;
+  top: 25%;
+  left: 68%;
   transform: rotate(240deg);
 }
 
@@ -713,22 +739,36 @@ footer p {
     width: 25cqw;     
   }
   .page-access .character-rocket {
-    left: 78%;
+    left: 80%;
     top: 8%;
     width: 15cqw;     
   }
   .page-access .character-nicole {
     left: 8%;
-    top: 10%;
-    width: 50cqw;     
+    top: 5%;
+    width: 40cqw;     
     transform: scaleX(-1);
   }
   .page-access .character-earth {
-    left: 10%;
-    top: 75%;
+    left: 5%;
+    top: 60%;
     width: 25cqw;     
   }
-
+  .page-awards .character-nicole {
+    left: 48%;
+    top: 25%;
+    width: 20cqw;     
+  }
+  .page-awards .character-rocket {
+    left: 7%;
+    top: 28.5%;
+    width: 18cqw;     
+  }
+  .page-awards .character-planet {
+    left: 70%;
+    top: 6%;
+    width: 22cqw;     
+  }
 
   .speech-bubble {
     padding: 3cqw 4cqw;              /* roughly doubles the inner spacing */
@@ -794,23 +834,23 @@ footer p {
 
   .page-access .speech-bubble {
     font-size: 3.5cqw;
-    top: 40%;
-    left: 52%;
+    top: 35%;
+    left: 45%;
     width: 43%
   }
   .page-access .speech-bubble::after {
     top: 15cqw;                             
     width: 10cqw;       
     height: 16cqw;    
-    transform: scaleX(-1) rotate(180deg);
+    transform: rotate(360deg);
     left: -7%;                
   }
 
   .page-awards .speech-bubble {
     font-size: 3.5cqw;
-    top: 20%;
-    left: 10%;
-    width: 60%
+    top: 38%;
+    left: 35%;
+    width: 46%
   }
   .scene-button {
     width: 16cqw;   
@@ -845,20 +885,20 @@ footer p {
     left: 77.5%;
   }
   .page-access .button-design {
-    top: 77%;       
-    left: 24%;
+    top: 58%;       
+    left: 22%;
   }
   .page-access .button-awards {
     top: 8%;       
     left: 65%;
   }
   .page-awards .button-accessibility {
-    top: 35%;       
-    left: 1%;
+    top: 25%;       
+    left: 15%;
   }
   .page-awards .button-resume {
-    top: 10%;       
-    left: 55%;
+    top: 12%;       
+    left: 54%;
   }
   .arrow {
   font-size: 10cqw;   /* was 5cqw */
