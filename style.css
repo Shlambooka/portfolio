@@ -197,13 +197,44 @@ nav a.active {
 
 .scene-character {
   position: absolute;
-  width: 20cqw;     /* adjust to match her size in the art */
+  width: 20cqw;     
   height: auto;
-  top: 46%;      /* adjust to line her feet up with the ground */
-  left: 58%;        /* adjust to place her horizontally */
-  z-index: 5;       /* above background, below speech bubble */
+  top: 46%;      
+  left: 58%;        
+  z-index: 5;       
   filter: drop-shadow(0.15cqw 0.15cqw 0px rgba(0, 0, 0, 0.3));
 }
+.page-design .character-monster {
+  left: 14%;
+  top: 35%;
+  width: 25cqw;     
+  height: auto;
+}
+.page-design .character-nicole {
+  left: 80%;
+  top: 20%;
+  width: 15cqw;     
+  height: auto;
+}
+.page-access .character-nicole {
+  left: 55%;
+  top: 20%;
+  width: 25cqw;     
+  height: auto;
+}
+.page-access .character-earth {
+  left: 4%;
+  top: 76%;
+  width: 15cqw;     
+  height: auto;
+}
+.page-access .character-rocket {
+  left: 85%;
+  top: 12%;
+  width: 10cqw;     
+  height: auto;
+}
+
 
 /* Speech Bubble */
 
@@ -293,15 +324,33 @@ nav a.active {
 .page-design .speech-bubble {
   top: 21%;
   left: 35%;
-  width: 24%;
+  width: 40%;
   font-size: 2cqw;
 }
+.page-design .speech-bubble::after {
+  background-image: url('images/speech-bubble-tail_side.svg');
+  top: 11.5cqw;   
+  transform: translateX(-50%) rotate(270deg); 
+  left: 20%;              
+  width: 5cqw;       
+  height: 10cqw;    
+}
+
 .page-access .speech-bubble {
-  top: 56%;
-  left: 22%;
-  width: 20%;
+  top: 50%;
+  left: 18%;
+  width: 40%;
   font-size: 2cqw;
 }
+.page-access .speech-bubble::after {
+  background-image: url('images/speech-bubble-tail_side.svg');
+  top: 8.5cqw;   
+  transform: scaleX(-1) translateX(-50%) rotate(270deg); 
+  left: 70%;              
+  width: 5cqw;       
+  height: 10cqw;    
+}
+
 .page-awards .speech-bubble {
   top: 23.5%;
   left: 40%;
@@ -653,20 +702,45 @@ footer p {
     left: 50%;        /* adjust to place her horizontally */
   }
 
+  .page-design .character-monster {
+    left: 14%;
+    top: 48%;
+    width: 45cqw;     
+  }
+  .page-design .character-nicole {
+    left: 73%;
+    top: 17%;
+    width: 25cqw;     
+  }
+  .page-access .character-rocket {
+    left: 78%;
+    top: 8%;
+    width: 15cqw;     
+  }
+  .page-access .character-nicole {
+    left: 8%;
+    top: 10%;
+    width: 50cqw;     
+    transform: scaleX(-1);
+  }
+  .page-access .character-earth {
+    left: 10%;
+    top: 75%;
+    width: 25cqw;     
+  }
+
+
   .speech-bubble {
     padding: 3cqw 4cqw;              /* roughly doubles the inner spacing */
     border-radius: 4cqw;              /* matches the roundness proportion */
     filter: drop-shadow(0.4cqw 0.4cqw 0px rgba(0, 0, 0, 0.3));
   }
-
-
   .page-home .speech-bubble {
     font-size: 3.5cqw;
     top: 35%;
     left: 11%;
     width: 45%
   }
-
   .page-home .speech-bubble::after {
     top: 77%;               /* Attach to the bottom */
     right: 20%;              /* Anchor to the right */
@@ -677,21 +751,18 @@ footer p {
     width: 8cqw;             /* Swap width and height */
     height: 16cqw;           /* because it is now rotated */
   }
-
   .page-learning .speech-bubble {
     font-size: 3.5cqw;
     top: 56%;
     left: 30%;
     width: 56%
   }
-
   .page-learning .speech-bubble::after {
     top: 30%;                    
     left: -3cqw;              
     width: 10cqw;       
     height: 16cqw;    
   }
-
 
   .page-knowledge .speech-bubble {
     font-size: 3.5cqw;
@@ -709,16 +780,32 @@ footer p {
 
   .page-design .speech-bubble {
     font-size: 3.5cqw;
-    top: 41%;
-    left: 15%;
-    width: 56%
+    top: 37%;
+    left: 5%;
+    width: 90%
   }
+  .page-design .speech-bubble::after {
+    top: 15cqw;                             
+    width: 10cqw;       
+    height: 16cqw;    
+    transform: rotate(270deg);
+    left: 60%;                
+  }
+
   .page-access .speech-bubble {
     font-size: 3.5cqw;
-    top: 43%;
-    left: 60%;
-    width: 30%
+    top: 40%;
+    left: 52%;
+    width: 43%
   }
+  .page-access .speech-bubble::after {
+    top: 15cqw;                             
+    width: 10cqw;       
+    height: 16cqw;    
+    transform: scaleX(-1) rotate(180deg);
+    left: -7%;                
+  }
+
   .page-awards .speech-bubble {
     font-size: 3.5cqw;
     top: 20%;
