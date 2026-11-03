@@ -489,24 +489,580 @@ nav a.active {
 /*#endregion ROUND BUTTONS & ARROWS */
 
 /*#region KNOWLEDGE - BOOKS */
+
+/* 1. The Background & Container */
 .portfolio {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: -3rem auto 0 auto;
+  position: relative;
+  z-index: 10;
 }
+
+/* 2. The Main Headings */
+.portfolio h2 {
+  font-family: 'Bevan', serif;
+  color: #f2683c;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+.portfolio > p {
+  font-family: 'Open Sans', sans-serif;
+  color: #5a727b;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* 3. The Book Streams (Categories) */
 .book-stream {
-  margin-bottom: 3rem;
+  margin-bottom: 4rem;
 }
+
+.book-stream h3 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2rem;
+  font-weight: 100;
+  color: #45c1c9;
+  border-bottom: 3px solid #45c1c9;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-stream p {
+  font-family: 'Open Sans', sans-serif;
+  color: #5a727b;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 4. The Book Grid & Cards */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem;
 }
+
 .book-grid img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
-  border-radius: 4px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+/* --- THE HERO STAT (1 book every 12 days) --- */
+.stat-hero {
+  text-align: center;
+  margin: 5rem 0;
+  padding: 4rem 2rem; /* Matched padding to the timeline */
+  background-color: #f2683c; /* Swapped from dark blue to the timeline turquoise */
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* The Star Background (matches the timeline star) */
+.stat-hero::before {
+  content: "✦";
+  position: absolute;
+  top: -30px; /* Moved to match timeline's bottom-left star feel */
+  left: -30px;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.1); /* Slightly brighter since turquoise is lighter */
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stat-hero-number {
+  font-family: 'Bevan', serif;
+  color: #ffffff; /* Deep slate blue to match timeline title */
+  font-size: 8rem;
+  line-height: 0.8;
+  margin: 0;
+  text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2); /* White shadow for pop */
+  border-bottom: none;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-hero-text {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff; /* Deep slate blue */
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-hero-text strong {
+  color: #ffffff; /* Warm orange to match the timeline dots */
+  font-weight: 700;
+}
+
+.stat-hero-sub {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff; /* Soft slate blue to match timeline sub-text */
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* --- THE DONUT CHART (Dark Blue Background) --- */
+.stat-donut-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  margin: 5rem 0; 
+  padding: 4rem 2rem;
+  background-color: #3b7187; 
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  flex-wrap: wrap; 
+  position: relative;
+  overflow: hidden; 
+}
+
+.star-bg {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star-bg::before {
+  content: "✦";
+}
+
+.stat-donut-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  z-index: 1; 
+  min-width: 150px;
+}
+
+.donut-percentage {
+  font-family: 'Bevan', serif;
+  font-size: 5rem;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
+.turquoise-text { color: #45c1c9; }
+.orange-text { color: #f2683c; }
+
+.donut-label {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.donut-sub {
+  font-family: 'Open Sans', sans-serif;
+  color: #d6ebf2;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-top: 0.3rem;
+}
+
+.donut-chart {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #f2683c 0% 60%, 
+    #45c1c9 60% 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); 
+  flex-shrink: 0;
+  z-index: 1; 
+}
+
+.donut-hole {
+  width: 110px;
+  height: 110px;
+  background-color: #3b7187; 
+  border-radius: 50%;
+  box-shadow: inset 0 3px 10px rgba(0,0,0,0.3); 
+}
+
+@media (max-width: 850px) {
+  .stat-donut-container {
+    flex-direction: column; /* Stacks the 40%, the chart, and the 60% vertically */
+    gap: 2rem; /* Reduces the gap slightly so it doesn't get too tall */
+  }
+
+  .donut-chart {
+    /* Optional: If the chart feels too big on small phones, you can shrink it */
+    width: 180px;
+    height: 180px;
+  }
+
+  .donut-hole {
+    /* Shrink the hole to match the new chart size */
+    width: 90px;
+    height: 90px;
+  }
+}
+
+/* --- THE READING TIMELINE --- */
+.reading-timeline {
+  background-color: #45c1c9; 
+  border-radius: 2rem;
+  padding: 4rem 2rem;
+  margin: 5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.reading-timeline::before {
+  content: "✦";
+  position: absolute;
+  bottom: -30px;
+  left: -30px;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.timeline-title {
+  font-family: 'Bevan', serif;
+  color: #3b7187;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 4rem;
+  border-bottom: none;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-track {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.timeline-track::before {
+  content: "";
+  position: absolute;
+  top: 15px; 
+  left: 10%;
+  width: 80%;
+  height: 4px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  z-index: -1;
+}
+
+.timeline-stop {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f2683c; 
+  border: 4px solid #ffffff;
+  box-shadow: none;
+  margin-bottom: 2rem;
+  z-index: 2;
+}
+
+.timeline-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-years {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff; 
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-phase {
+  font-family: 'Bevan', serif;
+  color: #3b7187;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+  max-width: 220px; 
+}
+
+.timeline-count {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.timeline-sub {
+  font-family: 'Open Sans', sans-serif;
+  color: #5a727b;
+  font-size: 0.8rem;
+  font-style: italic;
+  margin-top: 0.3rem;
+  max-width: 200px;
+  line-height: 1.3;
+}
+
+/* --- MOBILE VIEW --- */
+@media (max-width: 850px) {
+  .reading-timeline {
+    padding: 3rem 1.5rem;
+  }
+
+  .timeline-track {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .timeline-track::before {
+    top: 0;
+    left: 14px;
+    width: 4px;
+    height: 100%;
+  }
+
+  .timeline-stop {
+    flex-direction: row;
+    text-align: left;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .timeline-dot {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .timeline-content {
+    align-items: flex-start;
+  }
+
+  .timeline-phase, .timeline-sub {
+    max-width: 100%;
+  }
+}
+
+
+/* --- THE COMEBACK CURVE --- */
+.reading-comeback {
+  background-color: #3b7187;
+  border-radius: 2rem;
+  padding: 4rem 2rem;
+  margin: 5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* The Star Background */
+.reading-comeback::before {
+  content: "✦";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.comeback-title {
+  font-family: 'Bevan', serif;
+  color: #ffffff;
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: none;
+  position: relative;
+  z-index: 1;
+}
+
+.comeback-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  color: #d6ebf2;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+}
+
+/* The Chart Area */
+.bar-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; /* Aligns bars to the bottom */
+  height: 300px; /* The maximum height of the tallest bar */
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 40px; /* Space for the year labels */
+}
+
+.bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  height: 100%;
+  justify-content: flex-end;
+  position: relative;
+}
+
+/* The container for each bar */
+.bar-container {
+  width: 60%; /* Width of the bar */
+  max-width: 60px;
+  height: 100%;
+  display: flex;
+  align-items: flex-end; /* Makes the bar grow from the bottom */
+  justify-content: center;
+  position: relative;
+}
+
+/* Base Bar Style */
+.bar {
+  width: 100%;
+  border-radius: 6px 6px 0 0; /* Rounded top */
+  transition: height 1s ease-out; /* Animates the bar growing */
+}
+
+/* Bar Colors */
+.bar-standard {
+  background-color: #45c1c9; /* Turquoise */
+}
+
+.bar-low {
+  background-color: #45c1c9; /* Muted Slate */
+}
+
+.bar-peak {
+  background-color: #45c1c9;; /* Bright Pink */
+
+}
+
+.bar-progress {
+  background-color: #fb497e;
+  box-shadow: 0 0 15px rgba(251, 73, 126, 0.4); /* Glow effect */
+}
+
+/* Text above the bars */
+.bar-value {
+  font-family: 'Bevan', serif;
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  position: absolute;
+  top: -30px; /* Positions it above the bar container */
+}
+
+/* Year Labels */
+.bar-year {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  position: absolute;
+  bottom: -30px;
+}
+
+/* Special Notes (Hardest year, Peak recovery) */
+.bar-note {
+  font-family: 'Open Sans', sans-serif;
+  color: #f2683c; /* Warm Orange */
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: absolute;
+  bottom: -50px;
+  width: 100px;
+  text-align: center;
+}
+
+/* --- MOBILE VIEW --- */
+@media (max-width: 850px) {
+  .reading-comeback {
+    padding: 3rem 1rem;
+  }
+  
+  .bar-chart {
+    height: 200px; /* Shorter chart on mobile */
+  }
+  
+  .bar-container {
+    width: 80%; /* Wider bars so they don't get too skinny */
+  }
+  
+  .bar-value {
+    font-size: 1rem;
+    top: -25px;
+  }
+  
+  .bar-year {
+    font-size: 0.75rem;
+    bottom: -25px;
+  }
+  
+  .bar-note {
+    display: none; /* Hides the "Peak recovery" notes on tiny screens to prevent overlap */
+  }
+}
+
+
+
 /*#endregion KNOWLEDGE - BOOKS */
 
 /*#region DESIGN - LIGHTBOX */
