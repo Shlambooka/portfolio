@@ -1,0 +1,63 @@
+
+/* --- THE HERO STAT (1 book every 12 days) --- */
+.stat-hero {
+  text-align: center;
+  margin: 5rem 0;
+  padding: 4rem 2rem;
+  background-color: var(--color-orange); 
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+/* The Star Background (matches the timeline star) */
+.stat-hero::before {
+  content: "✦";
+  position: absolute;
+  top: -30px; 
+  left: -30px;
+  font-size: 15rem;
+  color: rgba(255, 255, 255, 0.1);
+  transform: rotate(15deg);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.stat-hero-number {
+  font-family: var(--font-display);
+  color: white; 
+  font-size: 8rem;
+  line-height: 0.8;
+  margin: 0;
+  text-shadow: 4px 4px 0px rgba(255, 255, 255, 0.2); 
+  border-bottom: none;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-hero-text {
+  font-family: var(--font-ui);
+  color: white; 
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-hero-text strong {
+  color: white; 
+  font-weight: 700;
+}
+
+.stat-hero-sub {
+  font-family: var(--font-ui);
+  color: white; 
+  font-size: 1rem;
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}

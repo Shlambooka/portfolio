@@ -1,0 +1,81 @@
+
+/*#region RESUME STYLES */
+.resume-content {
+  padding-top: 6rem; 
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-bottom: 4rem;
+  max-width: 900px; 
+  margin: 0 auto;
+}
+.resume-content h1 {
+  color: var(--color-turquoise);
+  font-size: 3.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 100;
+}
+.resume-content h1 span {
+  font-size: 1.2rem;
+  color: var(--color-slate); 
+}
+.resume-content ul {
+  color: var(--color-slate);
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  list-style-type: none;  
+  padding-left: 1.8rem;
+}
+.resume-content li strong {
+  color: var(--color-turquoise);
+  font-weight: 600;
+}
+.resume-section {
+  margin-bottom: 3rem; 
+}
+.resume-section h2 {
+  color: var(--color-turquoise);
+  font-size: 2.25rem;
+  font-weight: 100;
+  border-bottom: 2px solid var(--color-turquoise); 
+  padding-bottom: 0.3rem;
+  margin-bottom: 1.5rem;
+}
+.resume-content h3 {
+  color: var(--color-orange);
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+.resume-content h4 {
+  color: var(--color-turquoise);
+  margin-top: 0;
+  margin-bottom: 0.2rem;
+}
+.resume-content p,
+.resume-content li {
+  color: var(--color-slate);
+  line-height: 1.6; 
+}
+.resume-content p span {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-orange);
+}
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+.job-institution {
+  font-weight: 600;
+  color: var(--color-turquoise); 
+  margin-top: -0.5rem; 
+}
+.role-dates {
+  font-size: 0.9rem;
+  color: var(--color-slate);
+  font-family: var(--font-ui);
+  font-weight: normal;
+  margin-left: 0.5rem; 
+}
+/*#endregion RESUME STYLES */

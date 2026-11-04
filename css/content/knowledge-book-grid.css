@@ -1,0 +1,45 @@
+.book-stream {
+  margin-bottom: 4rem;
+}
+
+.book-stream h3 {
+  font-family: var(--font-ui);
+  font-size: 2rem;
+  font-weight: 100;
+  color: var(--color-turquoise);
+  border-bottom: 3px solid var(--color-turquoise);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.book-stream p {
+  font-family: var(--font-ui);
+  color: var(--color-slate);
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* 4. The Book Grid & Cards */
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 2rem;
+}
+
+.book-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+@media (max-width: 850px) {
+  .book-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem; 
+  }
+}
