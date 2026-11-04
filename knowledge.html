@@ -7,10 +7,10 @@
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/narrative.css">
   <link rel="stylesheet" href="css/content/knowledge-book-grid.css">
-  <link rel="stylesheet" href="css/content/knowledge-stat-average.css">
+  <link rel="stylesheet" href="css/content/knowledge-stat-book-number.css">
   <link rel="stylesheet" href="css/content/knowledge-stat-fiction.css">
-  <link rel="stylesheet" href="css/content/knowledge-stat-timeline.css">
-  <link rel="stylesheet" href="css/content/knowledge-stat-bar.css">
+  <link rel="stylesheet" href="css/content/knowledge-stat-statement.css">
+  <link rel="stylesheet" href="css/content/knowledge-stat-52books.css">
   <script src="js/nav.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,11 +18,12 @@
 </head>
 <body class="page-knowledge">
   <a href="#main-content" class="skip-link">Skip to main content</a>
+  
   <header>
     <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-haspopup="true">
-        <span></span>
-        <span></span>
-        <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
     <nav>
       <ul>
@@ -41,7 +42,7 @@
     <main id="main-content">
     
       <section class="scene" aria-label="Welcome scene">
-       <picture>
+        <picture>
           <source 
             media="(max-width: 850px)" 
             srcset="images/scenes/scene-knowledge-mobile-750.png 750w,
@@ -60,11 +61,9 @@
 
         <div class="speech-bubble">
           <p>
-            <span class="bubble-quote">“</span> Nicole reads across learning science, disability, and systems thinking so she can design for everyone.
+            <span class="bubble-quote">“</span> Nicole reads across learning science, disability, and systems thinking so she can design for everyone. <span class="bubble-quote">”</span>
           </p>
-          <p>
-            A robust background is what allows her to challenge assumptions and make evidence-based design trade-offs. <span class="bubble-quote">”</span>
-          </p>
+
         </div>
         <a href="learning.html" class="scene-button button-learning" aria-label="Go to Learning">
           <span class="arrow">➜</span>
@@ -76,236 +75,108 @@
 
       <section class="portfolio">
         <h2>The Reading Behind the Design</h2>
-        <p>Good design requires a foundation. These are the bricks.</p>
 
-
-        <div class="book-stream">
-          <h3>Learning Science & Design</h3>
-          <p>How people actually learn, and the frameworks behind effective instruction.</p>
-          <div class="book-grid">
-            <img src="https://cover.hoopladigital.com/hbg_9780738220093_270.jpeg" alt="How Children Learn by John Holt">
-            <img src="https://covers.openlibrary.org/b/isbn/9781541617155-M.jpg" alt="Book cover: Language at the Speed of Sight">
-            <img src="https://covers.openlibrary.org/b/isbn/9780465025992-M.jpg" alt="Free to Learn by Peter O. Gray">
-            <img src="https://covers.openlibrary.org/b/isbn/9781328450524-M.jpg" alt="Punished by Rewards by Alfie Kohn">
-            <img src="https://cdn.waterstones.com/bookjackets/large/9780/3933/9780393356847.jpg" alt="Rethinking School by Susan Wise Bauer">
-            <!-- <img src="https://covers.openlibrary.org/b/olid/OL3690862M-M.jpg" alt="The Well-Trained Mind by Susan Wise Bauer"> -->
-          </div>
+        <div class="reading-closing">
+          <p class="closing-statement">In an age of summaries,<br>a good designer reads the sources.</p>
         </div>
 
         <div class="stat-hero">
-          <h3 class="stat-hero-number">1</h3>
-          <p class="stat-hero-text">book every <strong>12 days</strong></p>
-          <p class="stat-hero-sub">244 books over 7 years of self-directed study.</p>
+          <h3 class="stat-hero-number">245</h3>
+          <p class="stat-hero-text">books. seven years. <strong>one habit.</strong></p>
+        </div>
+        
+        <div class="book-stream-wrapper">
+          <div class="book-stream">
+            <h3>Learning Science & Design</h3>
+            <p>The science of how people actually learn.</p>
+            <div class="book-grid">
+              <img src="https://cover.hoopladigital.com/hbg_9780738220093_270.jpeg" alt="How Children Learn by John Holt">
+              <img src="https://covers.openlibrary.org/b/isbn/9781541617155-M.jpg" alt="Book cover: Language at the Speed of Sight">
+              <img src="https://covers.openlibrary.org/b/isbn/9780465025992-M.jpg" alt="Free to Learn by Peter O. Gray">
+              <img src="https://covers.openlibrary.org/b/isbn/9781328450524-M.jpg" alt="Punished by Rewards by Alfie Kohn">
+              <img src="https://cdn.waterstones.com/bookjackets/large/9780/3933/9780393356847.jpg" alt="Rethinking School by Susan Wise Bauer">
+            </div>
+          </div>
+
+          <div class="book-stream">
+            <h3>Disability, Neurodiversity & Access</h3>
+            <p>The social model of disability, in practice.</p>
+            <div class="book-grid">
+              <img src="https://covers.openlibrary.org/b/olid/OL36015285M-M.jpg" alt="Uniquely Human by Barry M. Prizant">
+              <img src="https://covers.openlibrary.org/b/olid/OL38323001M-M.jpg" alt="Book cover: Unmasking Autism">
+              <img src="https://covers.openlibrary.org/b/olid/OL32725624M-M.jpg" alt="Book cover: Unwell Women">
+              <img src="https://cover.hoopladigital.com/csp_9780745346724_270.jpeg" alt="Mad World: The Politics of Mental Health by Micha Frazer-Carroll">
+              <img src="https://cover.hoopladigital.com/bkb_9781626569782_270.jpeg" alt="The Body Is Not an Apology by Sonya Renee Taylor">
+            </div>
+          </div>
+
+          <div class="book-stream">
+            <h3>Trauma & the Learning Brain</h3>
+            <p>Designing for safety, pacing, and trust.</p>
+            <div class="book-grid">
+              <img src="https://covers.openlibrary.org/b/olid/OL1563764M-M.jpg" alt="Book cover: Trauma and Recovery">
+              <img src="https://covers.openlibrary.org/b/olid/OL34154862M-M.jpg" alt="Book cover: The Myth of Normal">
+              <img src="https://cdn.shopify.com/s/files/1/0024/6874/1219/products/9781785042218.jpg?v=1652550726" alt="Scattered Minds by Gabor Maté">
+              <img src="https://covers.openlibrary.org/b/olid/OL27559101M-M.jpg" alt="Book cover: The Body Keeps the Score">
+              <img src="https://covers.openlibrary.org/b/isbn/9781611803433-M.jpg" alt="When Things Fall Apart by Pema Chödrön">
+            </div>
+          </div>
+
+          <div class="book-stream">
+            <h3>Gender & Identity (for inclusive design)</h3>
+            <p>Identity as a design constraint.</p>
+            <div class="book-grid">
+              <img src="https://covers.openlibrary.org/b/isbn/9781668017043-M.jpg" alt="Free to Be">
+              <img src="https://covers.openlibrary.org/b/olid/OL51506158M-M.jpg" alt="Who's Afraid of Gender?">
+              <img src="https://covers.openlibrary.org/b/olid/OL57761460M-M.jpg" alt="Trans History: A Graphic Novel by Alex L. Combs">
+              <img src="https://covers.openlibrary.org/b/isbn/9781785784521-M.jpg" alt="Gender: A Graphic Guide by Meg-John Barker">
+            </div>
+          </div>
+
+          <div class="book-stream">
+            <h3>Systems Thinking & Critical Analysis</h3>
+            <p>Looking at the system, not just the symptom.</p>
+            <div class="book-grid">
+              <img src="https://covers.openlibrary.org/b/isbn/9780374157357-M.jpg" alt="Book cover: The Dawn of Everything">
+              <img src="https://covers.openlibrary.org/b/olid/OL4260599M-M.jpg" alt="Book cover: How Europe Underdeveloped Africa">
+              <img src="https://covers.openlibrary.org/b/olid/OL32062927M-M.jpg" alt="Book cover: Bullshit Jobs">
+              <img src="https://covers.openlibrary.org/b/isbn/9780807056431-M.jpg" alt="Book cover: The Great Transformation">
+              <img src="https://images.yourcloudlibrary.com/delivery/img?type=DOCUMENTIMAGE&documentID=y1zsmr9&token=nobody" alt="Caste: The Origins of Our Discontents by Isabel Wilkerson">
+              <img src="https://covers.openlibrary.org/b/isbn/9781786090034-M.jpg" alt="Book cover: The Divide">
+              <img src="https://covers.openlibrary.org/b/olid/OL8696448M-M.jpg" alt="Caliban and the Witch by Silvia Federici">
+              <img src="https://covers.openlibrary.org/b/isbn/9780394713519-M.jpg" alt="Women, Race & Class by Angela Y. Davis">
+            </div>
+          </div>
         </div>
 
-        <div class="book-stream">
-          <h3>Disability, Neurodiversity & Access</h3>
-          <p>The social model of disability, neurodiversity-affirming practice, and the politics of mental health.</p>
-          <p>My approach aligns with Universal Design for Learning: designing for variability from the start, not retrofitting for accommodations.</p>
-          <div class="book-grid">
-            <img src="https://covers.openlibrary.org/b/olid/OL36015285M-M.jpg" alt="Uniquely Human by Barry M. Prizant">
-            <img src="https://covers.openlibrary.org/b/olid/OL38323001M-M.jpg" alt="Book cover: Unmasking Autism">
-            <img src="https://covers.openlibrary.org/b/olid/OL32725624M-M.jpg" alt="Book cover: Unwell Women">
-            <img src="https://cover.hoopladigital.com/csp_9780745346724_270.jpeg" alt="Mad World: The Politics of Mental Health by Micha Frazer-Carroll">
-            <img src="https://cover.hoopladigital.com/bkb_9781626569782_270.jpeg" alt="The Body Is Not an Apology by Sonya Renee Taylor">
-
+        <div class="reading-goal">
+          <div class="goal-content">
+            <div class="goal-number-box">
+              <span class="goal-big-number">52</span>
+              <span class="goal-small-text">books / year</span>
+            </div>
+            <div class="goal-text-box">
+              <p class="goal-highlight">Two-Year Streak!</p>
+            </div>
           </div>
         </div>
 
         <div class="stat-donut-container">
-          <!-- The Star Background -->
           <div class="star-bg"></div>
-
-          <!-- Left Side: 40% Turquoise -->
           <div class="stat-donut-side">
             <span class="donut-percentage turquoise-text">40%</span>
             <span class="donut-label">Fiction</span>
             <span class="donut-sub">Narrative Empathy</span>
           </div>
-
-          <!-- Center: The Donut -->
           <div class="donut-chart">
             <div class="donut-hole"></div>
           </div>
-
-          <!-- Right Side: 60% Orange -->
           <div class="stat-donut-side">
             <span class="donut-percentage orange-text">60%</span>
             <span class="donut-label">Non-Fiction</span>
             <span class="donut-sub">Evidence & Research</span>
           </div>
         </div>
-
-        <div class="book-stream">
-          <h3>Trauma & the Learning Brain</h3>
-          <p>How trauma affects memory, attention, and engagement, and how to design for safety and pacing.</p>
-          <div class="book-grid">
-            <img src="https://covers.openlibrary.org/b/olid/OL1563764M-M.jpg" alt="Book cover: Trauma and Recovery">
-            <img src="https://covers.openlibrary.org/b/olid/OL34154862M-M.jpg" alt="Book cover: The Myth of Normal">
-            <img src="https://cdn.shopify.com/s/files/1/0024/6874/1219/products/9781785042218.jpg?v=1652550726" alt="Scattered Minds by Gabor Maté">
-            <img src="https://covers.openlibrary.org/b/olid/OL27559101M-M.jpg" alt="Book cover: The Body Keeps the Score">
-            <img src="https://covers.openlibrary.org/b/isbn/9781611803433-M.jpg" alt="When Things Fall Apart by Pema Chödrön">
-          </div>
-        </div>
-
-        <div class="reading-timeline">
-          <h3 class="timeline-title">The Shape of the Study</h3>
-          
-          <div class="timeline-track">
-            
-            <!-- Phase 1 -->
-            <div class="timeline-stop">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-years">2019–2022</span>
-                <span class="timeline-phase">Parenting & Autism</span>
-                <span class="timeline-count">95 books</span>
-                <span class="timeline-sub">(38 focused titles).</span>
-              </div>
-            </div>
-
-            <!-- Phase 2 -->
-            <div class="timeline-stop">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-years">2023–2024</span>
-                <span class="timeline-phase">Disability, Trauma & Western Thought</span>
-                <span class="timeline-count">51 books</span>
-                <span class="timeline-sub">(Dual-track study: disability theory alongside the foundational texts of Western literature).</span>
-              </div>
-            </div>
-
-            <!-- Phase 3 -->
-            <div class="timeline-stop">
-              <div class="timeline-dot"></div>
-              <div class="timeline-content">
-                <span class="timeline-years">2025–2026</span>
-                <span class="timeline-phase">Systems, Political Economy & Feminism</span>
-                <span class="timeline-count">66 books</span>
-                <span class="timeline-sub">(Reading the frameworks behind the structures).</span>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="book-stream">
-          <h3>Gender & Identity (for inclusive design)</h3>
-          <p>Gender, identity, and belonging as design constraints, not afterthoughts.</p>
-          <div class="book-grid">
-            <img src="https://covers.openlibrary.org/b/isbn/9781668017043-M.jpg" alt="Free to Be">
-            <img src="https://covers.openlibrary.org/b/olid/OL51506158M-M.jpg" alt="Who's Afraid of Gender?">
-            <img src="https://covers.openlibrary.org/b/olid/OL57761460M-M.jpg" alt="Trans History: A Graphic Novel by Alex L. Combs">
-            <img src="https://covers.openlibrary.org/b/isbn/9781785784521-M.jpg" alt="Gender: A Graphic Guide by Meg-John Barker">
-          </div>
-        </div>
-
-
-        <div class="reading-comeback">
-          <h3 class="comeback-title">The Comeback Curve</h3>
-          <p class="comeback-subtitle">In 2022, my reading dropped to 12 books during my hardest health year. I used reading to rebuild my focus and stamina. By 2025, I was reading 52 books a year—and I'm already at 50+ in 2026.</p>
-          
-          <div class="bar-chart">
-            <!-- 2019 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">24</span>
-                <div class="bar bar-standard" style="height: 46%;"></div>
-              </div>
-              <span class="bar-year">2019</span>
-            </div>
-
-            <!-- 2020 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">31</span>
-                <div class="bar bar-standard" style="height: 60%;"></div>
-              </div>
-              <span class="bar-year">2020</span>
-            </div>
-
-            <!-- 2021 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">26</span>
-                <div class="bar bar-standard" style="height: 50%;"></div>
-              </div>
-              <span class="bar-year">2021</span>
-            </div>
-
-            <!-- 2022 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">12</span>
-                <div class="bar bar-low" style="height: 23%;"></div>
-              </div>
-              <span class="bar-year">2022</span>
-              <span class="bar-note">Hardest year</span>
-            </div>
-
-            <!-- 2023 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">27</span>
-                <div class="bar bar-standard" style="height: 52%;"></div>
-              </div>
-              <span class="bar-year">2023</span>
-            </div>
-
-            <!-- 2024 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">22</span>
-                <div class="bar bar-standard" style="height: 42%;"></div>
-              </div>
-              <span class="bar-year">2024</span>
-            </div>
-
-            <!-- 2025 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">52</span>
-                <div class="bar bar-peak" style="height: 100%;"></div>
-              </div>
-              <span class="bar-year">2025</span>
-              <span class="bar-note"></span>
-            </div>
-
-            <!-- 2026 -->
-            <div class="bar-group">
-              <div class="bar-container">
-                <span class="bar-value">50+</span>
-                <div class="bar bar-progress" style="height: 96%;"></div>
-              </div>
-              <span class="bar-year">2026</span>
-              <span class="bar-note">Rockin' it!</span>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-
-
-        <div class="book-stream">
-          <h3>Systems Thinking & Critical Analysis</h3>
-          <p>Why systems produce the problems they do, and how to design training that addresses root causes instead of symptoms.</p>
-          <div class="book-grid">
-            <img src="https://covers.openlibrary.org/b/isbn/9780374157357-M.jpg" alt="Book cover: The Dawn of Everything">
-            <img src="https://covers.openlibrary.org/b/olid/OL4260599M-M.jpg" alt="Book cover: How Europe Underdeveloped Africa">
-            <img src="https://covers.openlibrary.org/b/olid/OL32062927M-M.jpg" alt="Book cover: Bullshit Jobs">
-            <img src="https://covers.openlibrary.org/b/isbn/9780807056431-M.jpg" alt="Book cover: The Great Transformation">
-            <img src="https://images.yourcloudlibrary.com/delivery/img?type=DOCUMENTIMAGE&documentID=y1zsmr9&token=nobody" alt="Caste: The Origins of Our Discontents by Isabel Wilkerson">
-            <img src="https://covers.openlibrary.org/b/isbn/9781786090034-M.jpg" alt="Book cover: The Divide">
-            <img src="https://covers.openlibrary.org/b/olid/OL8696448M-M.jpg" alt="Caliban and the Witch by Silvia Federici">
-            <img src="https://covers.openlibrary.org/b/isbn/9780394713519-M.jpg" alt="Women, Race & Class by Angela Y. Davis">
-          </div>
-        </div>
-
-        <h2>FULL READING LIST LINK NEEDED</h2>
-
         
       </section>
 

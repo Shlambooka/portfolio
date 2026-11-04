@@ -1,0 +1,46 @@
+.reading-closing {
+  text-align: center;
+  padding: 5rem 2rem;
+  margin: 5rem 0;
+  background-color: var(--color-navy);
+  border-radius: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.reading-closing::before {
+  content: "✦";
+  position: absolute;
+  bottom: -20px;
+  left: -20px;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.closing-statement {
+  font-family: var(--font-display);
+  color: var(--color-pale-blue);
+  font-size: 2.5rem;
+  line-height: 1.3;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.closing-statement strong {
+  color: var(--color-orange);
+}
+
+@media (max-width: 850px) {
+  .reading-closing {
+    padding: 3rem 1.5rem;
+    margin: 3rem 0;
+  }
+
+  .closing-statement {
+    font-size: 1.8rem;
+  }
+}

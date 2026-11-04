@@ -1,0 +1,99 @@
+/* --- THE TWO-YEAR STREAK --- */
+.reading-goal {
+  background-color: var(--color-orange);
+  border-radius: 2rem;
+  padding: 4rem 2rem;
+  margin: 5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.reading-goal::before {
+  content: "✦";
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  font-size: 12rem;
+  color: rgba(255, 255, 255, 0.3);
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.goal-title {
+  font-family: var(--font-display);
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.goal-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 1;
+  max-width: 600px; 
+}
+
+.goal-number-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal-big-number {
+  font-family: var(--font-display);
+  color: white; 
+  font-size: 7rem;
+  line-height: 0.8;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+
+.goal-small-text {
+  font-family: var(--font-ui);
+  color: white; 
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+}
+
+.goal-text-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.goal-highlight {
+  font-family: var(--font-display);
+  color: white; 
+  font-size: 2rem;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+
+@media (max-width: 850px) {
+  .reading-goal {
+    padding: 3rem 1.5rem;
+  }
+
+  .goal-big-number {
+    font-size: 5.5rem;
+  }
+
+  .goal-highlight {
+    font-size: 1.5rem;
+  }
+}

@@ -1,15 +1,35 @@
+.book-stream-wrapper {
+  background-color: var(--color-pale-blue);
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+}
+
 .book-stream {
-  margin-bottom: 4rem;
+  padding: 3rem 2rem;
+  margin-bottom: 3rem;
+  text-align: center;
 }
 
 .book-stream h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  color: var(--color-navy);
+  border-bottom: none;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+
+.book-stream p {
   font-family: var(--font-ui);
-  font-size: 2rem;
-  font-weight: 100;
-  color: var(--color-turquoise);
-  border-bottom: 3px solid var(--color-turquoise);
-  padding-bottom: 0.5rem;
-  margin-bottom: 0.5rem;
+  color: var(--color-slate);
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin-top: -1rem; 
+  max-width: 600px; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .book-stream p {
@@ -24,6 +44,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
   gap: 2rem;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  justify-content: center; 
+  max-width: 1000px; 
+  margin: 3.5rem auto 0 auto;
 }
 
 .book-grid img {
@@ -35,6 +59,11 @@
   border-radius: 6px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15); 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.book-grid img:hover {
+  transform: scale(1.03);
 }
 
 @media (max-width: 850px) {
