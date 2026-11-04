@@ -1,8 +1,34 @@
+:root {
+  /* Colours */
+  --color-turquoise:       #45c1c9;
+  --color-turquoise-a95:   rgba(69, 193, 201, 0.95);
+  --color-turquoise-light: #9dd8db;
+  --color-orange:          #f2683c;
+  --color-slate:           #5a727b;
+  --color-slate-a20:       rgba(90, 114, 123, 0.2);
+  --color-slate-a30:       rgba(90, 114, 123, 0.3);
+  --color-navy:            #3b7187;
+  --color-pink:            #fb497e;
+  --color-pink-dark:       #bc1446;
+  --color-green:           #77ae71;
+  --color-ink:             #222b2e;
+  --color-pale-blue:       #d6ebf2;
+  --color-bg-dark:         #251e1a;
+
+  /* Fonts */
+  --font-display: 'Bevan', serif;
+  --font-body:    'Questrial', sans-serif;
+  --font-ui:      'Open Sans', sans-serif;
+
+  /* Shape */
+  --radius-bubble: 2cqw;
+}
+
 /*#region BODY & GLOBAL */
 body {
-  font-family: 'Questrial', sans-serif;
+  font-family: var(--font-body);
   margin: 0;
-  background-color: #251e1a;
+  background-color: var(--color-bg-dark);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -13,7 +39,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(69, 193, 201, 0.95);
+  background-color: var(--color-turquoise-a95);
   z-index: 100;
 }
 
@@ -26,15 +52,15 @@ header {
 }
 
 .page-column-home {
-  background-color: #77ae71;
+  background-color: var(--color-green);
 }
 
 .page-column-learning {
-  background-color: #3b7187;
+  background-color: var(--color-navy);
 }
 
 .page-column-awards {
-  background-color: #3b7187;
+  background-color: var(--color-navy);
 }
 
 .page-column-resume {
@@ -59,16 +85,16 @@ nav ul {
 nav a {
   padding: 14.3px 20px;
   text-decoration: none;
-  color: #222b2e;
+  color: var(--color-ink);
   display: block;
 }
 
 nav a:hover {
-  background-color: rgba(90, 114, 123, 0.2);
+  background-color: var(--color-slate-a20);
 }
 
 nav a.active {
-  background-color: rgba(90, 114, 123, 0.3);
+  background-color: var(--color-slate-a30);
 }
 
 /* Hamburger */
@@ -84,7 +110,7 @@ nav a.active {
   display: block;
   width: 25px;
   height: 3px;
-  background-color: #5a727b;
+  background-color: var(--color-slate);
   margin: 4px 0;
 }
 
@@ -99,7 +125,7 @@ nav a.active {
   top: 8px;
   padding: 8px 12px;
   background: #000;
-  color: #fff;
+  color: white;
   z-index: 1000;
 }
 /*#endregion NAV BAR */
@@ -147,7 +173,7 @@ nav a.active {
   top: -0.15em;              /* poke above the text for now */
   width: 100%;
   height: 0.08em;
-  background-image: radial-gradient(circle, #9dd8db 34%, transparent 35%);
+  background-image: radial-gradient(circle, var(--color-turquoise-light) 34%, transparent 35%);
   background-size: 0.194em 0.08em;
   background-repeat: repeat-x;
 }
@@ -158,14 +184,14 @@ nav a.active {
   bottom: -0.15em;              
   width: 100%;
   height: 0.08em;
-  background-image: radial-gradient(circle, #9dd8db 34%, transparent 35%);
+  background-image: radial-gradient(circle, var(--color-turquoise-light) 34%, transparent 35%);
   background-size: 0.194em 0.08em;
   background-repeat: repeat-x;
 }
 .w-hi,
 .w-nicole,
 .w-title {
-  font-family: 'Bevan', serif;
+  font-family: var(--font-display);
 }
 .w-hi,
 .w-title {
@@ -173,14 +199,14 @@ nav a.active {
 }
 .w-name,
 .w-iam {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-ui);
   font-weight: 200;
 }
-.w-hi      { font-size: 3cqw;  color: #45c1c9; }
-.w-name    { font-size: 2.75cqw; color: #45c1c9; }
-.welcome-headline .w-nicole  { font-size: 9.25cqw;  color: #f2683c; display: block; position: relative; top: 0.05em;}
-.w-iam     { font-size: 2.75cqw; color: #45c1c9; }
-.w-title   { font-size: 2.75cqw;  color: #45c1c9; }
+.w-hi      { font-size: 3cqw;  color: var(--color-turquoise); }
+.w-name    { font-size: 2.75cqw; color: var(--color-turquoise); }
+.welcome-headline .w-nicole  { font-size: 9.25cqw;  color: var(--color-orange); display: block; position: relative; top: 0.05em;}
+.w-iam     { font-size: 2.75cqw; color: var(--color-turquoise); }
+.w-title   { font-size: 2.75cqw;  color: var(--color-turquoise); }
 /*#endregion LARGE WELCOME FONT */
 
 /*#region CHARACTERS */
@@ -247,8 +273,8 @@ nav a.active {
 .speech-bubble {
   position: absolute;
   background-color: white;
-  border-radius: 2cqw; /* Scales the roundness with the scene */
-  padding: 1.5cqw 2cqw; /* Scales the inner spacing with the scene */
+  border-radius: var(--radius-bubble); 
+  padding: 1.5cqw 2cqw; 
   filter: drop-shadow(0.15cqw 0.15cqw 0px rgba(0, 0, 0, 0.3));
   box-sizing: border-box; 
 }
@@ -259,16 +285,16 @@ nav a.active {
   background-repeat: no-repeat;
 }
 .bubble-quote {
-  font-family: 'Bevan', serif;
-  color: #f2683c;
+  font-family: var(--font-display);
+  color: var(--color-orange);
   font-size: 1.6em;   /* Keep them large */
   line-height: 0;     /* THIS is the magic trick */
   vertical-align: -0.1em; /* Nudge it slightly down to sit nicely */
 }
 .speech-bubble p {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  color: #5a727b;
+  font-family: var(--font-ui);
+  color: var(--color-slate);
   text-align: left;
   line-height: 1.5;
 }
@@ -368,7 +394,7 @@ nav a.active {
   width: 6cqw;     
   height: 6cqw;
   border-radius: 50%;
-  background-color: #fb497e;  
+  background-color: var(--color-pink);  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -379,7 +405,7 @@ nav a.active {
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 .arrow {
-  color: #fff;
+  color: white;
   font-size: 4cqw;
   line-height: 1;
   position: relative;
@@ -388,7 +414,7 @@ nav a.active {
 
 .scene-button:hover,
 .scene-button:focus-visible {
-  background-color: #bc1446; 
+  background-color: var(--color-pink-dark); 
   transform: scale(1.08);
 } 
 .page-home .button-learning {
@@ -501,8 +527,8 @@ nav a.active {
 
 /* 2. The Main Headings */
 .portfolio h2 {
-  font-family: 'Bevan', serif;
-  color: #f2683c;
+  font-family: var(--font-display);
+  color: var(--color-orange);
   font-size: 2.5rem;
   text-align: center;
   margin-top: 0;
@@ -510,8 +536,8 @@ nav a.active {
 }
 
 .portfolio > p {
-  font-family: 'Open Sans', sans-serif;
-  color: #5a727b;
+  font-family: var(--font-ui);
+  color: var(--color-slate);
   text-align: center;
   max-width: 700px;
   margin: 0 auto 3rem auto;
@@ -525,18 +551,18 @@ nav a.active {
 }
 
 .book-stream h3 {
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-ui);
   font-size: 2rem;
   font-weight: 100;
-  color: #45c1c9;
-  border-bottom: 3px solid #45c1c9;
+  color: var(--color-turquoise);
+  border-bottom: 3px solid var(--color-turquoise);
   padding-bottom: 0.5rem;
   margin-bottom: 0.5rem;
 }
 
 .book-stream p {
-  font-family: 'Open Sans', sans-serif;
-  color: #5a727b;
+  font-family: var(--font-ui);
+  color: var(--color-slate);
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
 }
@@ -572,7 +598,7 @@ nav a.active {
   text-align: center;
   margin: 5rem 0;
   padding: 4rem 2rem; /* Matched padding to the timeline */
-  background-color: #f2683c; /* Swapped from dark blue to the timeline turquoise */
+  background-color: var(--color-orange); /* Swapped from dark blue to the timeline turquoise */
   border-radius: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   position: relative;
@@ -593,8 +619,8 @@ nav a.active {
 }
 
 .stat-hero-number {
-  font-family: 'Bevan', serif;
-  color: #ffffff; /* Deep slate blue to match timeline title */
+  font-family: var(--font-display);
+  color: white; 
   font-size: 8rem;
   line-height: 0.8;
   margin: 0;
@@ -605,8 +631,8 @@ nav a.active {
 }
 
 .stat-hero-text {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff; /* Deep slate blue */
+  font-family: var(--font-ui);
+  color: white; /* Deep slate blue */
   font-size: 2rem;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
@@ -616,13 +642,13 @@ nav a.active {
 }
 
 .stat-hero-text strong {
-  color: #ffffff; /* Warm orange to match the timeline dots */
+  color: white; /* Warm orange to match the timeline dots */
   font-weight: 700;
 }
 
 .stat-hero-sub {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff; /* Soft slate blue to match timeline sub-text */
+  font-family: var(--font-ui);
+  color: white; /* Soft slate blue to match timeline sub-text */
   font-size: 1rem;
   font-style: italic;
   margin: 0;
@@ -638,7 +664,7 @@ nav a.active {
   gap: 3rem;
   margin: 5rem 0; 
   padding: 4rem 2rem;
-  background-color: #3b7187; 
+  background-color: var(--color-navy); 
   border-radius: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
   flex-wrap: wrap; 
@@ -671,19 +697,19 @@ nav a.active {
 }
 
 .donut-percentage {
-  font-family: 'Bevan', serif;
+  font-family: var(--font-display);
   font-size: 5rem;
   line-height: 1;
   margin-bottom: 0.5rem;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
-.turquoise-text { color: #45c1c9; }
-.orange-text { color: #f2683c; }
+.turquoise-text { color: var(--color-turquoise); }
+.orange-text { color: var(--color-orange); }
 
 .donut-label {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
+  font-family: var(--font-ui);
+  color: white;
   font-size: 1.2rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -691,8 +717,8 @@ nav a.active {
 }
 
 .donut-sub {
-  font-family: 'Open Sans', sans-serif;
-  color: #d6ebf2;
+  font-family: var(--font-ui);
+  color: var(--color-pale-blue);
   font-size: 0.95rem;
   font-style: italic;
   margin-top: 0.3rem;
@@ -703,8 +729,8 @@ nav a.active {
   height: 220px;
   border-radius: 50%;
   background: conic-gradient(
-    #f2683c 0% 60%, 
-    #45c1c9 60% 100%
+    var(--color-orange) 0% 60%, 
+    var(--color-turquoise) 60% 100%
   );
   display: flex;
   align-items: center;
@@ -717,7 +743,7 @@ nav a.active {
 .donut-hole {
   width: 110px;
   height: 110px;
-  background-color: #3b7187; 
+  background-color: var(--color-navy); 
   border-radius: 50%;
   box-shadow: inset 0 3px 10px rgba(0,0,0,0.3); 
 }
@@ -743,7 +769,7 @@ nav a.active {
 
 /* --- THE READING TIMELINE --- */
 .reading-timeline {
-  background-color: #45c1c9; 
+  background-color: var(--color-turquoise); 
   border-radius: 2rem;
   padding: 4rem 2rem;
   margin: 5rem 0;
@@ -765,8 +791,8 @@ nav a.active {
 }
 
 .timeline-title {
-  font-family: 'Bevan', serif;
-  color: #3b7187;
+  font-family: var(--font-display);
+  color: var(--color-navy);
   font-size: 2rem;
   text-align: center;
   margin-top: 0;
@@ -792,7 +818,7 @@ nav a.active {
   left: 10%;
   width: 80%;
   height: 4px;
-  background-color: #ffffff;
+  background-color: white;
   border-radius: 2px;
   z-index: -1;
 }
@@ -810,8 +836,8 @@ nav a.active {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: #f2683c; 
-  border: 4px solid #ffffff;
+  background-color: var(--color-orange); 
+  border: 4px solid white;
   box-shadow: none;
   margin-bottom: 2rem;
   z-index: 2;
@@ -824,16 +850,16 @@ nav a.active {
 }
 
 .timeline-years {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff; 
+  font-family: var(--font-ui);
+  color: white; 
   font-size: 2rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
 .timeline-phase {
-  font-family: 'Bevan', serif;
-  color: #3b7187;
+  font-family: var(--font-display);
+  color: var(--color-navy);
   font-size: 1.4rem;
   line-height: 1.2;
   margin-bottom: 0.5rem;
@@ -841,15 +867,15 @@ nav a.active {
 }
 
 .timeline-count {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
+  font-family: var(--font-ui);
+  color: white;
   font-size: 0.95rem;
   font-weight: 700;
 }
 
 .timeline-sub {
-  font-family: 'Open Sans', sans-serif;
-  color: #5a727b;
+  font-family: var(--font-ui);
+  color: var(--color-slate);
   font-size: 0.8rem;
   font-style: italic;
   margin-top: 0.3rem;
@@ -901,7 +927,7 @@ nav a.active {
 
 /* --- THE COMEBACK CURVE --- */
 .reading-comeback {
-  background-color: #3b7187;
+  background-color: var(--color-navy);
   border-radius: 2rem;
   padding: 4rem 2rem;
   margin: 5rem 0;
@@ -924,8 +950,8 @@ nav a.active {
 }
 
 .comeback-title {
-  font-family: 'Bevan', serif;
-  color: #ffffff;
+  font-family: var(--font-display);
+  color: white;
   font-size: 2rem;
   text-align: center;
   margin-top: 0;
@@ -936,8 +962,8 @@ nav a.active {
 }
 
 .comeback-subtitle {
-  font-family: 'Open Sans', sans-serif;
-  color: #d6ebf2;
+  font-family: var(--font-ui);
+  color: var(--color-pale-blue);
   text-align: center;
   max-width: 700px;
   margin: 0 auto 4rem auto;
@@ -990,27 +1016,27 @@ nav a.active {
 
 /* Bar Colors */
 .bar-standard {
-  background-color: #45c1c9; /* Turquoise */
+  background-color: var(--color-turquoise); /* Turquoise */
 }
 
 .bar-low {
-  background-color: #45c1c9; /* Muted Slate */
+  background-color: var(--color-turquoise); /* Muted Slate */
 }
 
 .bar-peak {
-  background-color: #45c1c9;; /* Bright Pink */
+  background-color: var(--color-turquoise);; /* Bright Pink */
 
 }
 
 .bar-progress {
-  background-color: #fb497e;
+  background-color: var(--color-pink);
   box-shadow: 0 0 15px rgba(251, 73, 126, 0.4); /* Glow effect */
 }
 
 /* Text above the bars */
 .bar-value {
-  font-family: 'Bevan', serif;
-  color: #ffffff;
+  font-family: var(--font-display);
+  color: white;
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
   position: absolute;
@@ -1019,8 +1045,8 @@ nav a.active {
 
 /* Year Labels */
 .bar-year {
-  font-family: 'Open Sans', sans-serif;
-  color: #ffffff;
+  font-family: var(--font-ui);
+  color: white;
   font-size: 0.9rem;
   font-weight: 600;
   position: absolute;
@@ -1029,8 +1055,8 @@ nav a.active {
 
 /* Special Notes (Hardest year, Peak recovery) */
 .bar-note {
-  font-family: 'Open Sans', sans-serif;
-  color: #f2683c; /* Warm Orange */
+  font-family: var(--font-ui);
+  color: var(--color-orange); /* Warm Orange */
   font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
@@ -1157,56 +1183,56 @@ nav a.active {
   margin: 0 auto;
 }
 .resume-content h1 {
-  color: #45c1c9;
+  color: var(--color-turquoise);
   font-size: 3.25rem;
   margin-bottom: 0.5rem;
   font-weight: 100;
 }
 .resume-content h1 span {
   font-size: 1.2rem;
-  color: #5a727b; /* A softer color for the MSc BMC part */
+  color: var(--color-slate); /* A softer color for the MSc BMC part */
 }
 .resume-content ul {
-  color: #5a727b;
+  color: var(--color-slate);
   margin-top: 0;
   margin-bottom: 1.5rem;
   list-style-type: none;  
   padding-left: 1.8rem;
 }
 .resume-content li strong {
-  color: #45c1c9;
+  color: var(--color-turquoise);
   font-weight: 600; /* Keeps it slightly bold, but you can change this */
 }
 .resume-section {
   margin-bottom: 3rem; /* Adds space between the major sections */
 }
 .resume-section h2 {
-  color: #45c1c9;
+  color: var(--color-turquoise);
   font-size: 2.25rem;
   font-weight: 100;
-  border-bottom: 2px solid #45c1c9; /* A little separator line */
+  border-bottom: 2px solid var(--color-turquoise); /* A little separator line */
   padding-bottom: 0.3rem;
   margin-bottom: 1.5rem;
 }
 .resume-content h3 {
-  color: #f2683c;
+  color: var(--color-orange);
   margin-top: 0;
   margin-bottom: 0.2rem;
 }
 .resume-content h4 {
-  color: #45c1c9;
+  color: var(--color-turquoise);
   margin-top: 0;
   margin-bottom: 0.2rem;
 }
 .resume-content p,
 .resume-content li {
-  color: #5a727b;
+  color: var(--color-slate);
   line-height: 1.6; /* Makes it easier to read */
 }
 .resume-content p span {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #f2683c;
+  color: var(--color-orange);
 }
 .job-header {
   display: flex;
@@ -1216,13 +1242,13 @@ nav a.active {
 }
 .job-institution {
   font-weight: 600; /* Makes it semi-bold */
-  color: #45c1c9; /* Optional: makes it match your h2 headings */
+  color: var(--color-turquoise); /* Optional: makes it match your h2 headings */
   margin-top: -0.5rem; /* Optional: pulls it slightly closer to the degree title above it */
 }
 .role-dates {
   font-size: 0.9rem;
-  color: #5a727b;
-  font-family: 'Open Sans', sans-serif;
+  color: var(--color-slate);
+  font-family: var(--font-ui);
   font-weight: normal;
   margin-left: 0.5rem; /* Adds a small gap before the date */
 }
@@ -1245,9 +1271,9 @@ footer {
 }
 footer p {
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: var(--font-ui);
   font-size: 0.9rem;
-  color: #222b2e;
+  color: var(--color-ink);
 }
 /*#endregion FOOTER */
 
@@ -1267,7 +1293,7 @@ footer p {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: rgba(69, 193, 201, 0.95);
+  background-color: var(--color-turquoise-a95);
   padding: 10px 0;
   }
   nav.open a {
