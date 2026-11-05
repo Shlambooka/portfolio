@@ -408,15 +408,15 @@
 
   .page-knowledge .speech-bubble {
     font-size: 3.5cqw;
-    top: 63%;
-    left: 12%;
-    width: 75%
+    top: 55.5%;
+    left: 10%;
+    width: 50%
   }
   .page-knowledge .speech-bubble::after {
     top: -6cqw;                             
     width: 10cqw;       
     height: 16cqw;    
-    transform: scaleX(-1) rotate(90deg);
+    transform: scaleX(1) rotate(90deg);
     left: 20%;                
   }
 
