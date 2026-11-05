@@ -148,6 +148,12 @@ nav a.active {
   margin-bottom: 1rem;
 }
 
+.portfolio h3 {
+  color: var(--color-slate);
+  text-align: center;
+  font-size: 1.5rem;
+}
+
 .portfolio > p {
   font-family: var(--font-ui);
   color: var(--color-slate);
