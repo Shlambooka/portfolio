@@ -18,7 +18,7 @@
 .star-bg {
   position: absolute;
   top: -20px;
-  right: -20px;
+  left: -20px;
   font-size: 15rem;
   color: rgba(255, 255, 255, 0.05);
   transform: rotate(15deg);

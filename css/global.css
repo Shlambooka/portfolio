@@ -134,7 +134,7 @@ nav a.active {
 .portfolio {
   padding: 4rem 2rem;
   max-width: 1200px;
-  margin: -1rem auto 0 auto;
+  margin: -2cqw auto 0 auto;
   position: relative;
   z-index: 10;
 }
@@ -204,6 +204,6 @@ footer p {
   text-align: center;
   }
   .portfolio {
-    margin-top: -19rem; 
+    margin-top: -50cqw; 
   }
 }
