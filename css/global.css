@@ -1,5 +1,5 @@
 :root {
-  /* Colours */
+/* Colours */
   --color-turquoise:       #45c1c9;
   --color-turquoise-a95:   rgba(69, 193, 201, 0.95);
   --color-turquoise-light: #9dd8db;
@@ -134,7 +134,7 @@ nav a.active {
 .portfolio {
   padding: 4rem 2rem;
   max-width: 1200px;
-  margin: -2cqw auto 0 auto;
+  margin: -3cqw auto 0 auto;
   position: relative;
   z-index: 10;
 }

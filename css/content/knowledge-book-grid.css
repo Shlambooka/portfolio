@@ -1,12 +1,11 @@
-.book-stream-wrapper {
-  background-color: var(--color-pale-blue);
+/* .book-stream-wrapper {
+  background-color: var(--color-pale-blue); 
   border-radius: 2rem;
   padding: 3rem 2rem;
   margin-bottom: 3rem;
-}
+} */
 
 .book-stream {
-  padding: 3rem 2rem;
   margin-bottom: 3rem;
   text-align: center;
 }
@@ -18,36 +17,43 @@
   border-bottom: none;
   margin-top: 0;
   margin-bottom: 2rem;
+  padding-top: 3rem;
 }
 
-
-.book-stream p {
+.book-stream .tagline {
   font-family: var(--font-ui);
   color: var(--color-slate);
   font-size: 1.05rem;
   line-height: 1.5;
-  margin-top: -1rem; 
-  max-width: 600px; 
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 600px;
+  margin: -1rem auto 2rem auto;
 }
 
-.book-stream p {
+.book-stream .consequence {
+  margin: 2rem 0 0 0;
+  padding: 1.5rem 2rem;
+  background-color: var(--color-turquoise-light);
+  color: var(--color-navy);
   font-family: var(--font-ui);
-  color: var(--color-slate);
-  font-size: 1.25rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 0 0 1.5rem 1.5rem;
 }
+
 
 /* 4. The Book Grid & Cards */
 .book-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  /* Use a fixed size instead of 1fr so they don't stretch */
+  grid-template-columns: repeat(auto-fit, 160px);
   gap: 2rem;
-  transition: filter 0.3s ease, transform 0.3s ease;
+  /* This centers the whole group of books */
   justify-content: center; 
-  max-width: 1000px; 
-  margin: 3.5rem auto 0 auto;
+  /* This makes sure the images center themselves if they are smaller than 160px */
+  justify-items: center; 
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .book-grid img {
@@ -57,7 +63,7 @@
   object-position: center;
   display: block;
   border-radius: 6px;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15); 
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   filter: grayscale(100%);
 }
@@ -65,10 +71,46 @@
 .book-grid img:hover {
   transform: scale(1.03);
 }
+ 
+/* The Summary Button */
+summary.toggle-button {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--color-orange);
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  list-style: none; /* Hides default triangle in Firefox */
+}
+
+/* Hide the default triangle in WebKit (Chrome/Safari) */
+summary.toggle-button::-webkit-details-marker {
+  display: none;
+}
+
+/* Button Hover State */
+summary.toggle-button:hover {
+  text-decoration: underline;
+}
+
+/* Text Toggling Logic */
+.open-text {
+  display: none;
+}
+
+details[open] .closed-text {
+  display: none;
+}
+
+details[open] .open-text {
+  display: inline-block;
+}
+
 
 @media (max-width: 850px) {
   .book-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem; 
+    grid-template-columns: repeat(2, 120px); /* Adjust 120px as needed for smaller phones */
+    gap: 1rem;
+    padding: 0 1rem;
   }
 }

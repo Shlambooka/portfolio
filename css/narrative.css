@@ -135,9 +135,9 @@
   height: 10cqw;    
 }
 .page-knowledge .speech-bubble {
-  top: 77%;
+  top: 72%;
   left: 18.5%;
-  width: 48%;
+  width: 61%;
   font-size: 2cqw;
 }
 .page-knowledge .speech-bubble::after {
@@ -410,7 +410,7 @@
     font-size: 3.5cqw;
     top: 55.5%;
     left: 10%;
-    width: 50%
+    width: 80%;
   }
   .page-knowledge .speech-bubble::after {
     top: -6cqw;                             
