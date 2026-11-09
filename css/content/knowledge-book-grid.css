@@ -45,13 +45,10 @@
 /* 4. The Book Grid & Cards */
 .book-grid {
   display: grid;
-  /* Use a fixed size instead of 1fr so they don't stretch */
-  grid-template-columns: repeat(auto-fit, 160px);
+  grid-template-columns: repeat(4, 160px);
   gap: 2rem;
-  /* This centers the whole group of books */
-  justify-content: center; 
-  /* This makes sure the images center themselves if they are smaller than 160px */
-  justify-items: center; 
+  justify-content: center;
+  justify-items: center;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -109,8 +106,9 @@ details[open] .open-text {
 
 @media (max-width: 850px) {
   .book-grid {
-    grid-template-columns: repeat(2, 120px); /* Adjust 120px as needed for smaller phones */
+    grid-template-columns: repeat(2, 160px);
     gap: 1rem;
     padding: 0 1rem;
+    justify-content: center;
   }
 }
