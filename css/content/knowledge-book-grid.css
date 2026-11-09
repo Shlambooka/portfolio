@@ -109,7 +109,7 @@ details[open] .open-text {
 
 @media (max-width: 850px) {
   .book-grid {
-    grid-template-columns: repeat(3, 120px); /* Adjust 120px as needed for smaller phones */
+    grid-template-columns: repeat(2, 120px); /* Adjust 120px as needed for smaller phones */
     gap: 1rem;
     padding: 0 1rem;
   }
