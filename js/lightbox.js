@@ -5,7 +5,15 @@ const lightboxImg = lightbox.querySelector('.lightbox-img');
 
 // Build arrays of all full-size images and their alt text
 const galleryImages = document.querySelectorAll('.design-thumb');
-const imageSources = [...galleryImages].map(btn => btn.querySelector('img').dataset.full);
+
+// Check if we are on a small screen (850px or less)
+const isMobile = window.innerWidth <= 850;
+
+// Pick the right array of images based on the screen size
+const imageSources = [...galleryImages].map(btn => {
+  const img = btn.querySelector('img');
+  return isMobile ? (img.dataset.fullMobile || img.dataset.full) : img.dataset.full;
+});
 const imageAlts = [...galleryImages].map(btn => btn.querySelector('img').alt);
 
 let currentIndex = 0;

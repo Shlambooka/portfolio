@@ -17,13 +17,24 @@
   cursor: pointer;
   display: block;
   width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+
 }
 .design-thumb img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  border-radius: 4px;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.design-thumb img:hover {
+  transform: scale(1.03);
 }
 .lightbox {
   position: fixed;
@@ -79,5 +90,9 @@
   margin-top: -10cqw;
   position: relative;
   z-index: 30;
+}
+.design-grid {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem; /* Slightly smaller gap for mobile screens */
 }
 }

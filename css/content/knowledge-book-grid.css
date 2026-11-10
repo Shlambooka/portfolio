@@ -69,50 +69,6 @@
   transform: scale(1.03);
 }
  
-/* The Summary Button */
-summary.toggle-button {
-  display: inline-block;
-  cursor: pointer;
-  color: var(--color-pink);
-  font-weight: 600;
-  margin-top: 1.5rem;
-  margin-bottom: -0.5rem;
-  list-style: none; /* Hides default triangle in Firefox */
-}
-
-/* Hide the default triangle in WebKit (Chrome/Safari) */
-summary.toggle-button::-webkit-details-marker {
-  display: none;
-}
-
-/* Button Hover State */
-summary.toggle-button:hover .closed-text,
-summary.toggle-button:hover .open-text {
-  color: var(--color-pink-dark);
-}
-.open-text {
-  display: none;
-}
-details {
-  display: flex;
-  flex-direction: column;
-}
-details summary {
-  order: 2;
-  margin-top: 2rem; 
-  margin-bottom: 1rem;
-}
-details .book-grid {
-  order: 1; 
-  margin-top: 2rem;
-}
-details[open] .closed-text {
-  display: none;
-}
-details[open] .open-text {
-  display: inline-block;
-}
-
 
 @media (max-width: 850px) {
   .book-grid {

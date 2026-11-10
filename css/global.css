@@ -167,12 +167,11 @@ nav a.active {
 
 /*#region SHOW MORE/LESS BUTTONS */
 
-/* --- Global Show More / Show Less Toggle --- */
-
 summary.toggle-button {
-  display: inline-block;
+  display: block;
+  text-align: center;
   cursor: pointer;
-  color: var(--color-brand-pink); /* Using your global token */
+  color: var(--color-pink);
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: -0.5rem;
@@ -185,7 +184,7 @@ summary.toggle-button::-webkit-details-marker {
 
 summary.toggle-button:hover .closed-text,
 summary.toggle-button:hover .open-text {
-  color: var(--color-brand-dark-pink); /* Using your global token */
+  color: var(--color-pink-dark); 
 }
 
 .open-text {
