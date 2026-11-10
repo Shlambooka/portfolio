@@ -1,7 +1,7 @@
 
 /*#region DESIGN - LIGHTBOX */
 .page-column-design .portfolio {
-  margin-top: -32vh;
+  margin-top: -10cqw;
   position: relative;
   z-index: 30;
 }
@@ -72,3 +72,12 @@
   right: 0.1rem;
 }
 /*#endregion DESIGN - LIGHTBOX */
+
+
+@media (max-width: 850px) {
+.page-column-design .portfolio {
+  margin-top: -10cqw;
+  position: relative;
+  z-index: 30;
+}
+}

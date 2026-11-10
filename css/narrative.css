@@ -24,15 +24,15 @@
   filter: drop-shadow(0.15cqw 0.15cqw 0px rgba(0, 0, 0, 0.3));
 }
 .page-design .character-monster {
-  left: 14%;
-  top: 35%;
+  left: 12%;
+  top: 44%;
   width: 25cqw;     
   height: auto;
 }
 .page-design .character-nicole {
-  left: 80%;
-  top: 20%;
-  width: 15cqw;     
+  left: 83%;
+  top: 17%;
+  width: 13cqw;     
   height: auto;
 }
 .page-access .character-nicole {
@@ -137,7 +137,7 @@
 .page-knowledge .speech-bubble {
   top: 72%;
   left: 18.5%;
-  width: 68%;
+  width: 60%;
   font-size: 2cqw;
 }
 .page-knowledge .speech-bubble::after {
@@ -149,18 +149,18 @@
   height: 10cqw;    
 }
 .page-design .speech-bubble {
-  top: 21%;
-  left: 35%;
+  top: 53%;
+  left: 41%;
   width: 40%;
   font-size: 2cqw;
 }
 .page-design .speech-bubble::after {
   background-image: url('../images/characters/speech-bubble-tail_side.svg');
-  top: 9cqw;   
-  transform: rotate(270deg) translateX(-50%); 
-  left: 20%;              
+  top: 40%;                    
+  transform: translateY(-50%); 
+  left: -1.8cqw;              
   width: 5cqw;       
-  height: 10cqw;    
+  height: 10cqw;       
 }
 .page-access .speech-bubble {
   top: 50%;
@@ -268,11 +268,11 @@
   transform: rotate(0deg) translateY(0.2cqw); 
 }
 .page-design .button-knowledge {
-  top: 30%;
-  left: 10%;
+  top: 35%;
+  left: 11%;
 }
 .page-design .button-knowledge .arrow {
-  transform: rotate(180deg) translateY(0.2cqw); 
+  transform: rotate(210deg) translateY(0.2cqw); 
 }
 .page-design .button-access {
   top: 16%;
@@ -331,12 +331,12 @@
   /* CHARACTERS */
   .page-design .character-monster {
     left: 14%;
-    top: 48%;
+    top: 65%;
     width: 45cqw;     
   }
   .page-design .character-nicole {
     left: 73%;
-    top: 17%;
+    top: 16%;
     width: 25cqw;     
   }
   .page-access .character-rocket {
@@ -410,7 +410,7 @@
     font-size: 3.5cqw;
     top: 55.5%;
     left: 10%;
-    width: 80%;
+    width: 75%;
   }
   .page-knowledge .speech-bubble::after {
     top: -6cqw;                             
@@ -422,9 +422,9 @@
 
   .page-design .speech-bubble {
     font-size: 3.5cqw;
-    top: 37%;
-    left: 5%;
-    width: 90%
+    top: 48%;
+    left: 15%;
+    width: 70%
   }
   .page-design .speech-bubble::after {
     top: 20.5cqw;                             
@@ -489,11 +489,11 @@
     left: 80%;
   }
   .page-design .button-knowledge {
-    top: 27%;       
-    left: 10%;
+    top: 33%;       
+    left: 21%;
   }
   .page-design .button-access {
-    top: 8%;       
+    top: 10%;       
     left: 77.5%;
   }
   .page-access .button-design {

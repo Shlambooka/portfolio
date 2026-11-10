@@ -132,7 +132,7 @@ nav a.active {
 
 /*#region PORTFOLIO SHELL */
 .portfolio {
-  padding: 4rem 2rem;
+  padding: 8cqw 4cqw;
   max-width: 1200px;
   margin: -3cqw auto 0 auto;
   position: relative;
@@ -164,6 +164,64 @@ nav a.active {
   line-height: 1.6;
 }
 /*#endregion PORTFOLIO SHELL */
+
+/*#region SHOW MORE/LESS BUTTONS */
+
+/* --- Global Show More / Show Less Toggle --- */
+
+summary.toggle-button {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--color-brand-pink); /* Using your global token */
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: -0.5rem;
+  list-style: none; 
+}
+
+summary.toggle-button::-webkit-details-marker {
+  display: none;
+}
+
+summary.toggle-button:hover .closed-text,
+summary.toggle-button:hover .open-text {
+  color: var(--color-brand-dark-pink); /* Using your global token */
+}
+
+.open-text {
+  display: none;
+}
+
+/* This allows the button to appear BELOW the grid */
+details {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Puts the button visually at the bottom */
+details summary {
+  order: 2;
+  margin-top: 2rem; 
+  margin-bottom: 1rem;
+}
+
+/* This targets ANY grid inside the details, not just books */
+details .book-grid,
+details .design-grid {
+  order: 1; 
+  margin-top: 2rem;
+}
+
+/* State changes */
+details[open] .closed-text {
+  display: none;
+}
+
+details[open] .open-text {
+  display: inline-block;
+}
+
+/*#endregion SHOW MORE/LESS BUTTONS */
 
 /*#region FOOTER */
 footer {
@@ -210,6 +268,10 @@ footer p {
   text-align: center;
   }
   .portfolio {
-    margin-top: -50cqw; 
+    margin-top: -4cqw; 
   }
+  .portfolio h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
 }
