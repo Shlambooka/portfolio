@@ -254,14 +254,14 @@
   transform: translateY(0.2cqw); 
 }
 .page-knowledge .button-learning {
-  top: 50%;
+  top: 48%;
   left: 13%;
 }
 .page-knowledge .button-learning .arrow {
   transform: rotate(-180deg) translateY(0.2cqw); 
 }
 .page-knowledge .button-design {
-  top: 42%;
+  top: 38%;
   left: 87%;
 }
 .page-knowledge .button-design .arrow {
@@ -321,7 +321,7 @@
 /*#region MEDIA QUERY */
 
 @media (max-width: 850px) {
-.scene-character {
+  .scene-character {
     width: 50cqw;     
     height: auto;
     top: 46%;      

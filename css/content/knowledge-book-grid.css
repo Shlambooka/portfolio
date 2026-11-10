@@ -1,13 +1,9 @@
-/* .book-stream-wrapper {
-  background-color: var(--color-pale-blue); 
-  border-radius: 2rem;
-  padding: 3rem 2rem;
-  margin-bottom: 3rem;
-} */
-
 .book-stream {
   margin-bottom: 3rem;
   text-align: center;
+  background-color: #f1ffff;
+  border-radius: var(--radius-bubble);
+
 }
 
 .book-stream h3 {

@@ -1,7 +1,6 @@
 
 /*#region DESIGN - LIGHTBOX */
 .page-column-design .portfolio {
-  margin-top: -10cqw;
   position: relative;
   z-index: 30;
 }
@@ -9,6 +8,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
+  margin-top: 6cqw;
 }
 .design-thumb {
   padding: 0;
@@ -87,12 +87,12 @@
 
 @media (max-width: 850px) {
 .page-column-design .portfolio {
-  margin-top: -10cqw;
   position: relative;
   z-index: 30;
 }
 .design-grid {
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem; /* Slightly smaller gap for mobile screens */
+  gap: 1rem; 
+  margin-top: 10cqw;
 }
 }

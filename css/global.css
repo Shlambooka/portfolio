@@ -139,16 +139,24 @@ nav a.active {
   z-index: 10;
 }
 
+.page-knowledge .portfolio {
+    margin-top: -10cqw;
+}
+
+.page-design .portfolio {
+    margin-top: -10cqw;
+}
+
 .portfolio h2 {
   font-family: var(--font-display);
   color: var(--color-orange);
   font-size: 2.5rem;
   text-align: center;
-  margin-top: 0;
-  margin-bottom: 1rem;
 }
 
 .portfolio h3 {
+  font-family: var(--font-ui);
+  font-weight: 100;
   color: var(--color-slate);
   text-align: center;
   font-size: 1.5rem;
@@ -269,8 +277,11 @@ footer p {
   .portfolio {
     margin-top: -4cqw; 
   }
-  .portfolio h2 {
-  margin-top: 0;
-  margin-bottom: 1rem;
-}
+  .page-knowledge .portfolio {
+    margin-top: -60cqw;
+  }
+    .page-design .portfolio {
+      margin-top: -5cqw;
+  }
+
 }
