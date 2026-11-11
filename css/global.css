@@ -54,9 +54,8 @@ a {
 
 a:hover,
 a:focus-visible {
-  color: var(--color-pink-dark);
+  color: black;
 }
-
 
 .page-column {
   max-width: 1600px;
@@ -112,6 +111,7 @@ nav a.active {
   background-color: var(--color-slate-a30);
 }
 
+
 /* Hamburger */
 .menu-toggle {
   display: none;
@@ -157,8 +157,13 @@ nav a.active {
     margin-top: -10cqw;
 }
 .page-design .portfolio {
-    margin-top: -10cqw;
+    margin-top: -14cqw;
 }
+.page-column-design .portfolio {
+  position: relative;
+  z-index: 30;
+}
+
 .page-awards .portfolio {
     margin-top: -8cqw;
 }

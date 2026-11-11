@@ -15,6 +15,7 @@ if (lightbox) {
     return isMobile ? (img.dataset.fullMobile || img.dataset.full) : img.dataset.full;
   });
   const imageAlts = [...galleryImages].map(btn => btn.querySelector('img').alt);
+  const lightboxCaption = lightbox.querySelector('.lightbox-caption');
 
   let currentIndex = 0;
 
@@ -24,6 +25,7 @@ if (lightbox) {
       currentIndex = index;
       lightboxImg.src = imageSources[currentIndex];
       lightboxImg.alt = imageAlts[currentIndex];
+      lightboxCaption.textContent = imageAlts[currentIndex];
       lightbox.hidden = false;
     });
   });
@@ -36,12 +38,14 @@ if (lightbox) {
     currentIndex = (currentIndex - 1 + imageSources.length) % imageSources.length;
     lightboxImg.src = imageSources[currentIndex];
     lightboxImg.alt = imageAlts[currentIndex];
+    lightboxCaption.textContent = imageAlts[currentIndex]; 
   });
 
   lightboxNext.addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % imageSources.length;
     lightboxImg.src = imageSources[currentIndex];
     lightboxImg.alt = imageAlts[currentIndex];
+    lightboxCaption.textContent = imageAlts[currentIndex];
   });
 
   // Close button
