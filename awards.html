@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="css/content/awards.css">
   <script src="js/nav.js" defer></script>
   <script src="js/lightbox.js" defer></script>
+  <script src="js/flyer.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Open+Sans:wght@400;600;700&family=Questrial&display=swap" rel="stylesheet">
@@ -76,7 +77,10 @@
 
       <section class="portfolio">
         <h2>Taking the Natural Path with your Pet</h2>
-        <h3>Consumer Flyer</h3>
+        <p><strong>PB2: </strong>Brochure - Business-to-Consumer</p>
+        <p><strong>Company: </strong> LifeLearn Inc.</p>
+        <p><strong>Client: </strong>Ceva Animal Health</p>
+
 
         <div class="design-grid">
           
@@ -137,6 +141,7 @@
               alt="The full unfolded natural path flyer - Back" 
               class="flyer-static">
         </div>
+        <a href="https://www.communicatorawards.com/winners/winners-gallery/?event=49&award=99&search=lifelearn">Link to Communicator Awards</a>
 
       </section>
 
@@ -146,6 +151,30 @@
       <p>&copy; 2026 Nicole Nascimento</p>
     </footer>
   </div>
+
+
+
+  <!-- The Flyer Loupe Viewer -->
+
+  <div id="flyer-viewer" class="flyer-viewer" hidden>
+    <button class="loupe-close" aria-label="Close">&times;</button>
+    
+    <!-- The Top Square (The Zoom Window) -->
+    <div id="loupe-display" class="loupe-display"></div>
+    
+    <!-- The Bottom Flyer (The Trigger) -->
+     <p style="color: white; font-family: 'Open Sans', sans-serif; margin-bottom: 1rem; font-size: 1.1rem; text-align: center;">
+        Move your mouse over the flyer to magnify
+      </p>
+    <div class="loupe-trigger-container">
+      <img id="loupe-image" src="images/awards-gallery/flyer-unfolded-front-desktop.jpg" 
+          alt="Flyer" 
+          class="loupe-image">
+    </div>
+  </div>
+
+
+
 
   <div id="lightbox" class="lightbox" hidden>
     <button class="lightbox-close" aria-label="Close">&times;</button>

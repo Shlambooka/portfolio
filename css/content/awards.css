@@ -1,3 +1,17 @@
+
+.page-awards .portfolio h2 {
+  color: var(--color-pale-blue);
+}
+
+.page-awards .portfolio h3 {
+  color: white;
+}
+
+.page-awards .portfolio p {
+    color: white;
+    margin: auto;
+}
+
 .flyer-hero {
   margin-top: 4rem;     
   margin-bottom: 4rem;  
@@ -12,10 +26,83 @@
   border-radius: 8px;   
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15); 
 }
-.page-awards .portfolio h2 {
-  color: var(--color-pale-blue);
+
+/* The dark background */
+.flyer-viewer {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
 }
 
-.page-awards .portfolio h3 {
+.flyer-viewer[hidden] {
+  display: none;
+}
+
+/* The close button */
+.loupe-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 3rem;
   color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* The Square Display on Top */
+.loupe-display {
+  width: 60vw;         
+  height: 60vw;        
+  max-width: 800px;
+  max-height: 800px;
+  border: 4px solid white; 
+  border-radius: 12px;
+  background-repeat: no-repeat;
+  
+  /* THIS IS THE MAGIC FIX */
+  background-size: 800% auto; 
+  
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.5), 0 10px 30px rgba(0,0,0,0.6);
+  margin-bottom: 1rem;
+}
+
+/* The Bottom Flyer Container */
+.loupe-trigger-container {
+  width: 60vw;         
+  max-width: 800px;    
+  height: 150px;       /* Made it a shorter, cleaner strip */
+  overflow-x: auto; 
+  overflow-y: hidden;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 8px;
+  cursor: crosshair;
+}
+.loupe-trigger-container::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+/* The Flyer Image */
+.loupe-image {
+  height: 100%;  /* Fills the height of the strip */
+  width: auto;   /* Stretches the image out so it becomes super wide */
+  max-width: none; 
+  display: block;
+}
+
+/* Mobile Fallback: Hide the loupe, just let them pinch-zoom the flyer */
+@media (max-width: 850px) {
+  .loupe-display {
+    display: none;
+  }
+  .loupe-trigger-container {
+    height: 60vh;
+    overflow: auto; /* Allow scrolling both ways on mobile */
+  }
 }
