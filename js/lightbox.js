@@ -75,6 +75,36 @@ if (lightbox) {
       lightboxPrev.click();
     }
   });
+  
+  // ==========================================
+  // SWIPE SUPPORT (Mobile)
+  // ==========================================
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  // Record where the finger first touched
+  lightbox.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+
+  // When finger lifts, calculate the distance
+  lightbox.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const swipeThreshold = 50; // Minimum pixels to count as a swipe
+    const distance = touchEndX - touchStartX;
+
+    if (distance > swipeThreshold) {
+      // Swiped right → go to previous image
+      lightboxPrev.click();
+    } else if (distance < -swipeThreshold) {
+      // Swiped left → go to next image
+      lightboxNext.click();
+    }
+  } 
 }
 
 
