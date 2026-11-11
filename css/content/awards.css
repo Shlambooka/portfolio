@@ -1,6 +1,6 @@
 
 .page-awards .portfolio h2 {
-  color: var(--color-pale-blue);
+  color: var(--color-star-yellow);
 }
 
 .page-awards .portfolio h3 {
@@ -11,6 +11,18 @@
     color: white;
     margin: auto;
 }
+
+
+a {
+  color: var(--color-star-yellow);
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-turquoise);
+}
+
+
 
 .flyer-hero {
   margin-top: 4rem;     
@@ -83,7 +95,7 @@
 .loupe-trigger-container {
   width: 60vw;         
   max-width: 800px;    
-  height: 150px;       /* Made it a shorter, cleaner strip */
+  height: 150px;      
   overflow-x: auto; 
   overflow-y: hidden;
   border: 2px solid rgba(255,255,255,0.3);
@@ -95,8 +107,8 @@
 }
 /* The Flyer Image */
 .loupe-image {
-  height: 100%;  /* Fills the height of the strip */
-  width: auto;   /* Stretches the image out so it becomes super wide */
+  height: 100%;  
+  width: auto;   
   max-width: none; 
   display: block;
 }

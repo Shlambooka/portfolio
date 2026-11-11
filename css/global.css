@@ -14,6 +14,7 @@
   --color-ink:             #222b2e;
   --color-pale-blue:       #d6ebf2;
   --color-bg-dark:         #251e1a;
+  --color-star-yellow:     #f9f7c8;
 
   /* Fonts */
   --font-display: 'Bevan', serif;
@@ -42,6 +43,20 @@ header {
   background-color: var(--color-turquoise-a95);
   z-index: 100;
 }
+
+a {
+  color: var(--color-pink);
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--color-pink-dark);
+}
+
 
 .page-column {
   max-width: 1600px;
