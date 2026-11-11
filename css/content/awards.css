@@ -113,9 +113,26 @@ a:focus-visible {
   display: block;
 }
 
+/* Hide the hint by default on desktop */
+.mobile-flyer-hint {
+  display: none;
+}
+
+
 /* Mobile Fallback: Hide the loupe, just let them pinch-zoom the flyer */
 @media (max-width: 850px) {
-    /* Hide the loupe display on mobile */
+  .mobile-flyer-hint {
+    display: block;
+    color: white;
+    font-family: var(--font-ui, 'Open Sans', sans-serif);
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 3rem; /* Push it down so it doesn't hit the close button */
+    margin-bottom: 1rem;
+    opacity: 0.8;
+  }
+  
+  /* Hide the loupe display on mobile */
   .loupe-display {
     display: none; 
   }
@@ -159,7 +176,7 @@ a:focus-visible {
   }
 
   /* Hide the "move your mouse" text */
-  .flyer-viewer p {
+  .desktop-flyer-hint {
     display: none;
   }
   
