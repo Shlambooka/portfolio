@@ -26,6 +26,11 @@
   border-radius: 8px;   
   box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.15); 
 }
+.flyer-static:focus {
+  outline: 4px solid var(--color-pink, #fb497e);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
 
 /* The dark background */
 .flyer-viewer {
@@ -98,6 +103,54 @@
 
 /* Mobile Fallback: Hide the loupe, just let them pinch-zoom the flyer */
 @media (max-width: 850px) {
+    /* Hide the loupe display on mobile */
+  .loupe-display {
+    display: none; 
+  }
+
+  /* Force the container to scroll horizontally */
+  .loupe-trigger-container {
+    width: 100%;
+    height: auto;      /* Let it size to the image height */
+    overflow-x: auto;  /* Allow left/right scrolling */
+    overflow-y: hidden;
+    border: none; 
+    margin-top: 0;
+  }
+
+  /* Make the image physically larger than the phone screen */
+  .loupe-image {
+    height: 50vh;      /* Make it take up half the screen height */
+    width: auto;       /* Let the width stretch out to 3000px+ */
+    max-width: none;
+  }
+
+  /* Keep the close button fixed */
+  .loupe-close {
+    position: fixed;
+    top: 1rem;
+    right: 1.5rem;
+    background: rgba(0,0,0,0.5); 
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  /* Ensure the dark overlay doesn't scroll, only the container does */
+  .flyer-viewer {
+    display: flex;     
+    padding: 0;   
+    justify-content: center;
+  }
+
+  /* Hide the "move your mouse" text */
+  .flyer-viewer p {
+    display: none;
+  }
+  
   .loupe-display {
     display: none;
   }
