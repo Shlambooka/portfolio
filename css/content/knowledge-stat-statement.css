@@ -47,10 +47,15 @@
   z-index: 1; 
 }
 
+
 /* Make sure the bold text stands out against the orange */
 .closing-subtext strong {
   font-weight: 700;
   color: white; 
+}
+
+.page-awards .closing-subtext {
+  padding-bottom: 20px;
 }
 
 @media (max-width: 850px) {
