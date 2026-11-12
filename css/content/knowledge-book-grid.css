@@ -1,18 +1,24 @@
+/* =========================================
+   1. GLOBAL RESETS & BASE STYLES
+   ========================================= */
+summary {
+  color: inherit;
+}
+
 .book-stream {
   margin-bottom: 3rem;
   text-align: center;
   border-radius: var(--radius-bubble);
-  background-color: var(--theme-bg);
+  background-color: var(--theme-bg); /* Driven by the theme */
 }
 
 .book-stream h3 {
   font-family: var(--font-ui);
   font-size: 1.8rem;
-  border-bottom: none;
   margin-top: 0;
   margin-bottom: 2rem;
   padding-top: 3rem;
-  color: var(--theme-heading);
+  color: var(--theme-heading); /* Driven by the theme */
 }
 
 .book-stream .tagline {
@@ -24,6 +30,10 @@
   margin: -1rem auto 2rem auto;
 }
 
+
+/* =========================================
+   2. THE TOGGLE BUTTON (Base Layout)
+   ========================================= */
 .book-toggle {
   margin: 2rem 0 0 0;
   padding: 1.5rem 2rem;
@@ -33,17 +43,25 @@
   text-align: center;
   border-radius: 0 0 var(--radius-bubble) var(--radius-bubble);
   display: block; 
-  background-color: var(--theme-btn-bg);
   transition: background-color 0.3s ease, color 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+  
+  /* Pull colors from the theme */
+  background-color: var(--theme-btn-bg);
+  color: var(--theme-toggle-text);
 }
 
+
+/* =========================================
+   3. THE THEMES
+   ========================================= */
 .theme-learn {
   --theme-bg: var(--color-cyan-hint);         
   --theme-btn-bg: var(--color-turquoise-light); 
   --theme-btn-hover: var(--color-turquoise-a95);      
   --theme-heading: var(--color-turquoise);    
   --theme-toggle-text: var(--color-navy); 
-  --theme-toggle-hover-text: var(--color-turquoise-dark);
+  --theme-toggle-hover-text: var(--color-navy); /* Fixed: Turquoise-dark doesn't exist */
 }
 
 .theme-access {
@@ -64,6 +82,10 @@
   --theme-toggle-hover-text: var(--color-green-dark); 
 }
 
+
+/* =========================================
+   4. CHAPTER HEADINGS & THEME OVERRIDES
+   ========================================= */
 [class*="theme-"] > h2 {
   font-family: var(--font-display);
   text-align: center;
@@ -73,24 +95,28 @@
   font-size: 2.5rem; 
 }
 
-[class*="theme-"] .book-toggle {
-  background-color: var(--theme-btn-bg);
-}
-
-[class*="theme-"] .book-toggle .closed-text,
-[class*="theme-"] .book-toggle .open-text {
+/* Target the summary specifically to beat global.css */
+[class*="theme-"] summary.book-toggle .closed-text,
+[class*="theme-"] summary.book-toggle .open-text {
   color: var(--theme-toggle-text);
 }
 
-[class*="theme-"] .book-toggle:hover {
-  background-color: var(--theme-btn-hover); 
+/* Hover states (Desktop only) */
+@media (hover: hover) {
+  [class*="theme-"] summary.book-toggle:hover {
+    background-color: var(--theme-btn-hover); 
+  }
+
+  [class*="theme-"] summary.book-toggle:hover .closed-text,
+  [class*="theme-"] summary.book-toggle:hover .open-text {
+    color: var(--theme-toggle-hover-text); 
+  }
 }
 
-[class*="theme-"] .book-toggle:hover .closed-text,
-[class*="theme-"] .book-toggle:hover .open-text {
-  color: var(--theme-toggle-hover-text); 
-}
 
+/* =========================================
+   5. THE BOOK GRID (Desktop)
+   ========================================= */
 .book-grid {
   display: grid;
   grid-template-columns: repeat(4, 160px);
@@ -109,27 +135,38 @@
   display: block;
   border-radius: 6px;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease;
   filter: grayscale(100%);
 }
 
 .book-grid img:hover {
   transform: scale(1.03);
 }
- 
 
+
+/* =========================================
+   6. MOBILE LAYOUT
+   ========================================= */
 @media (max-width: 850px) {
+  .book-stream {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
   .book-grid {
     grid-template-columns: repeat(2, 1fr); 
     gap: 1rem;
-    padding: 0 1rem;
-    justify-content: center;
+    padding: 0;
     max-width: 400px; 
     margin: 0 auto;
   }
+  
+  /* Hide the 3rd and 4th books in the first grid */
   .book-stream > .book-grid > img:nth-child(n+3) {
     display: none;
   }
+  
+  /* Show them when the details tag is opened */
   .book-stream details[open] ~ .book-grid > img:nth-child(n+3) {
     display: block;
   }
