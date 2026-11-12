@@ -564,7 +564,16 @@
     top: 12%;       
     left: 56%;
   }
-  
+  .adventure-btn {
+    padding: 0.8rem 1.8rem; 
+    font-size: 1rem; 
+    gap: 0.4rem; 
+    margin-top: 1.5rem; 
+  }
+
+  .adventure-btn .arrow {
+    font-size: 1.2rem; 
+  }
 }
 
 /*#endregion MEDIA QUERY */

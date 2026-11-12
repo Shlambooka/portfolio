@@ -19,7 +19,7 @@ a {
 
 a:hover,
 a:focus-visible {
-  color: var(--color-turquoise);
+  color: var(--color-yellow);
 }
 
 

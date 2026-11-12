@@ -90,7 +90,8 @@ summary {
   color: #ffffff;
   background-color: var(--theme-heading); 
   padding: 1rem 2.5rem; 
-  border-radius: 50px; 
+  /* border-radius: 50px;  */
+  border-radius: 15px; 
   display: table; 
   margin: 6rem auto 2rem auto; 
   box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1); /* A hard shadow gives it a physical "sticker" feel */
