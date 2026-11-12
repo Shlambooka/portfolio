@@ -1,20 +1,35 @@
 :root {
 /* Colours */
-  --color-turquoise:       #45c1c9;
+  --color-pink:            hsl(342, 96%, 64%);
+  --color-pink-dark:       hsl(342, 81%, 41%);
+  --color-pink-hint:       hsl(342, 100%, 97%);
+  --color-orange-light:    hsl(15, 77%, 66%);
+  --color-orange:          hsl(15, 87%, 59%);
+  --color-orange-dark:     hsl(15, 75%, 47%);
+  --color-yellow-hint:     hsl(60, 100%, 97%);
+  --color-yellow:          hsl(58, 84%, 88%);
+  --color-yellow-dark:     hsl(58, 80%, 78%);
+  --color-green:           hsl(114, 27%, 56%);
+  --color-green-dark:      hsl(114, 48%, 26%);
+  --color-green-light:     hsl(114, 40%, 76%);
+  --color-green-hint:      hsl(114, 100%, 96%);
+  --color-cyan-hint:       hsl(184, 100%, 97%);
+  --color-turquoise:       hsl(184, 55%, 53%);
   --color-turquoise-a95:   rgba(69, 193, 201, 0.95);
-  --color-turquoise-light: #9dd8db;
-  --color-orange:          #f2683c;
+  --color-turquoise-light: hsl(184, 46%, 74%);
+  --color-pale-blue:       #d6ebf2;
+  --color-navy:            #3b7187;
   --color-slate:           #5a727b;
   --color-slate-a20:       rgba(90, 114, 123, 0.2);
   --color-slate-a30:       rgba(90, 114, 123, 0.3);
-  --color-navy:            #3b7187;
-  --color-pink:            #fb497e;
-  --color-pink-dark:       #bc1446;
-  --color-green:           #77ae71;
+
+
+
+
   --color-ink:             #222b2e;
-  --color-pale-blue:       #d6ebf2;
+
   --color-bg-dark:         #251e1a;
-  --color-star-yellow:     #f9f7c8;
+
 
   /* Fonts */
   --font-display: 'Bevan', serif;
@@ -167,12 +182,19 @@ nav a.active {
 .page-awards .portfolio {
     margin-top: -8cqw;
 }
-.portfolio h2 {
+.portfolio h1 {
   font-family: var(--font-display);
   color: var(--color-orange);
   font-size: 2.5rem;
   text-align: center;
 }
+.portfolio h2 {
+  font-family: var(--font-body);
+  color: var(--color-turquoise);
+  font-size: 2rem;
+  text-align: center;
+}
+
 .portfolio h3 {
   font-family: var(--font-ui);
   font-weight: 100;
@@ -180,6 +202,7 @@ nav a.active {
   text-align: center;
   font-size: 1.5rem;
 }
+
 .portfolio > p {
   font-family: var(--font-ui);
   color: var(--color-slate);

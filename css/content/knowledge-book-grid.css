@@ -1,7 +1,7 @@
 .book-stream {
   margin-bottom: 3rem;
   text-align: center;
-  background-color: #f1ffff;
+  background-color: var(--color-cyan-hint);
   border-radius: var(--radius-bubble);
 
 }
@@ -25,7 +25,7 @@
   margin: -1rem auto 2rem auto;
 }
 
-.book-stream .consequence {
+.book-stream .book-toggle {
   margin: 2rem 0 0 0;
   padding: 1.5rem 2rem;
   background-color: var(--color-turquoise-light);
@@ -34,9 +34,64 @@
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
-  border-radius: 0 0 1.5rem 1.5rem;
+  border-radius: 0 0 var(--radius-bubble) var(--radius-bubble);
+  display: block; 
 }
 
+
+/* THEME-LEARN */
+.theme-learn {
+    background-color: var(--color-cyan-hint);
+}
+.theme-learn .book-toggle:hover {
+  background-color: var(--color-turquoise-a95); 
+}
+.theme-learn summary.toggle-button  {
+  color: var(--color-navy);
+}
+.theme-learn summary.toggle-button:hover .closed-text,
+.theme-learn summary.toggle-button:hover .open-text {
+  color: var(--color-ink); 
+}
+
+/* THEME-ACCESS */
+.theme-access h2 {
+  color: blue;
+}
+.theme-access {
+    background-color: var(--color-yellow-hint);
+}
+.theme-access .book-toggle {
+  background-color: var(--color-yellow); 
+}
+.theme-access .book-toggle:hover {
+  background-color: var(--color-yellow-dark); 
+}
+.theme-access summary.toggle-button  {
+  color: var(--color-orange-light);
+}
+.theme-access summary.toggle-button:hover .closed-text,
+.theme-access summary.toggle-button:hover .open-text {
+  color: var(--color-orange-dark); 
+}
+
+/* THEME-LEARN */
+.theme-systems {
+    background-color: var(--color-green-hint);
+}
+.theme-systems .book-toggle {
+  background-color: var(--color-green-light); 
+}
+.theme-systems .book-toggle:hover {
+  background-color: var(--color-green); 
+}
+.theme-systems summary.toggle-button  {
+  color: var(--color-green);
+}
+.theme-systems summary.toggle-button:hover .closed-text,
+.theme-systems summary.toggle-button:hover .open-text {
+  color: var(--color-green-dark); 
+}
 
 /* 4. The Book Grid & Cards */
 .book-grid {
