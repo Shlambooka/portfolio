@@ -1,19 +1,18 @@
 .book-stream {
   margin-bottom: 3rem;
   text-align: center;
-  background-color: var(--color-cyan-hint);
   border-radius: var(--radius-bubble);
-
+  background-color: var(--theme-bg);
 }
 
 .book-stream h3 {
-  font-family: var(--font-display);
+  font-family: var(--font-ui);
   font-size: 1.8rem;
-  color: var(--color-turquoise);
   border-bottom: none;
   margin-top: 0;
   margin-bottom: 2rem;
   padding-top: 3rem;
+  color: var(--theme-heading);
 }
 
 .book-stream .tagline {
@@ -25,75 +24,73 @@
   margin: -1rem auto 2rem auto;
 }
 
-.book-stream .book-toggle {
+.book-toggle {
   margin: 2rem 0 0 0;
   padding: 1.5rem 2rem;
-  background-color: var(--color-turquoise-light);
-  color: var(--color-navy);
   font-family: var(--font-ui);
   font-size: 1.1rem;
   font-weight: 600;
   text-align: center;
   border-radius: 0 0 var(--radius-bubble) var(--radius-bubble);
   display: block; 
+  background-color: var(--theme-btn-bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-
-/* THEME-LEARN */
 .theme-learn {
-    background-color: var(--color-cyan-hint);
-}
-.theme-learn .book-toggle:hover {
-  background-color: var(--color-turquoise-a95); 
-}
-.theme-learn summary.toggle-button  {
-  color: var(--color-navy);
-}
-.theme-learn summary.toggle-button:hover .closed-text,
-.theme-learn summary.toggle-button:hover .open-text {
-  color: var(--color-ink); 
+  --theme-bg: var(--color-cyan-hint);         
+  --theme-btn-bg: var(--color-turquoise-light); 
+  --theme-btn-hover: var(--color-turquoise-a95);      
+  --theme-heading: var(--color-turquoise);    
+  --theme-toggle-text: var(--color-navy); 
+  --theme-toggle-hover-text: var(--color-turquoise-dark);
 }
 
-/* THEME-ACCESS */
-.theme-access h2 {
-  color: blue;
-}
 .theme-access {
-    background-color: var(--color-yellow-hint);
-}
-.theme-access .book-toggle {
-  background-color: var(--color-yellow); 
-}
-.theme-access .book-toggle:hover {
-  background-color: var(--color-yellow-dark); 
-}
-.theme-access summary.toggle-button  {
-  color: var(--color-orange-light);
-}
-.theme-access summary.toggle-button:hover .closed-text,
-.theme-access summary.toggle-button:hover .open-text {
-  color: var(--color-orange-dark); 
+  --theme-bg: var(--color-yellow-hint);        
+  --theme-btn-bg: var(--color-yellow);    
+  --theme-btn-hover: var(--color-yellow-dark);  
+  --theme-heading: var(--color-orange); 
+  --theme-toggle-text: var(--color-orange-dark); 
+  --theme-toggle-hover-text: var(--color-orange);
 }
 
-/* THEME-LEARN */
 .theme-systems {
-    background-color: var(--color-green-hint);
-}
-.theme-systems .book-toggle {
-  background-color: var(--color-green-light); 
-}
-.theme-systems .book-toggle:hover {
-  background-color: var(--color-green); 
-}
-.theme-systems summary.toggle-button  {
-  color: var(--color-green);
-}
-.theme-systems summary.toggle-button:hover .closed-text,
-.theme-systems summary.toggle-button:hover .open-text {
-  color: var(--color-green-dark); 
+  --theme-bg: var(--color-green-hint);          
+  --theme-btn-bg: var(--color-green-light);      
+  --theme-btn-hover: var(--color-green);  
+  --theme-heading: var(--color-green);    
+  --theme-toggle-text: var(--color-green-dark); 
+  --theme-toggle-hover-text: var(--color-green-dark); 
 }
 
-/* 4. The Book Grid & Cards */
+[class*="theme-"] > h2 {
+  font-family: var(--font-display);
+  text-align: center;
+  color: var(--theme-heading); 
+  margin-top: 8rem; 
+  margin-bottom: 3rem;
+  font-size: 2.5rem; 
+}
+
+[class*="theme-"] .book-toggle {
+  background-color: var(--theme-btn-bg);
+}
+
+[class*="theme-"] .book-toggle .closed-text,
+[class*="theme-"] .book-toggle .open-text {
+  color: var(--theme-toggle-text);
+}
+
+[class*="theme-"] .book-toggle:hover {
+  background-color: var(--theme-btn-hover); 
+}
+
+[class*="theme-"] .book-toggle:hover .closed-text,
+[class*="theme-"] .book-toggle:hover .open-text {
+  color: var(--theme-toggle-hover-text); 
+}
+
 .book-grid {
   display: grid;
   grid-template-columns: repeat(4, 160px);
@@ -123,9 +120,22 @@
 
 @media (max-width: 850px) {
   .book-grid {
-    grid-template-columns: repeat(2, 160px);
+    grid-template-columns: repeat(2, 1fr); 
     gap: 1rem;
     padding: 0 1rem;
     justify-content: center;
+    max-width: 400px; 
+    margin: 0 auto;
+  }
+  .book-stream > .book-grid > img:nth-child(n+3) {
+    display: none;
+  }
+  .book-stream details[open] ~ .book-grid > img:nth-child(n+3) {
+    display: block;
+  }
+
+  .book-stream details .book-grid {
+    padding-top: 1rem; 
+    padding-bottom: 2rem;
   }
 }
