@@ -318,6 +318,58 @@
 }
 /*#endregion ROUND BUTTONS & ARROWS */
 
+/*#region BACK TO TOP BUTTON */
+.btn-wrapper {
+  display: flex;
+  justify-content: center; /* Centers the button horizontally */
+  width: 100%;
+}
+
+.adventure-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem; 
+  margin-top: 2rem; /* Keeps space between text and button */
+  padding: 1rem 2.5rem;
+  background-color: white;
+  color: var(--color-orange);
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  border-radius: 50px; 
+  position: relative;
+  z-index: 1;
+  box-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.adventure-btn .arrow {
+  color: var(--color-orange);
+  font-size: 2rem;
+  line-height: 1;
+  position: relative;
+  display: inline-block; 
+  transform: translateY(0.1rem) rotate(-90deg); 
+}
+
+.adventure-btn:hover,
+.adventure-btn:focus-visible {
+  background-color: white; 
+  color: var(--color-orange-dark);
+  transform: scale(1.05); 
+  text-decoration: none;
+}
+
+/* Accessibility focus ring */
+.adventure-btn:focus-visible {
+  outline: 3px solid var(--color-pale-blue);
+  outline-offset: 4px;
+}
+/*#endregion BACK TO TOP BUTTON */
+
+
 /*#region MEDIA QUERY */
 
 @media (max-width: 850px) {
