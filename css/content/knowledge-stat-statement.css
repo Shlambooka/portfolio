@@ -1,7 +1,7 @@
 .reading-closing {
   text-align: center;
   padding: 5rem 2rem;
-  margin: 5rem 0;
+  margin: 8rem 0;
   background-color: var(--color-orange);
   border-radius: 2rem;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -61,7 +61,7 @@
 @media (max-width: 850px) {
   .reading-closing {
     padding: 3rem 1.5rem;
-    margin: 3rem 0;
+    margin: 6rem 0;
   }
 
   .closing-statement {

@@ -45,8 +45,6 @@ summary {
   display: block; 
   transition: background-color 0.3s ease, color 0.3s ease;
   -webkit-tap-highlight-color: transparent;
-  
-  /* Pull colors from the theme */
   background-color: var(--theme-btn-bg);
   color: var(--theme-toggle-text);
 }
@@ -86,13 +84,25 @@ summary {
 /* =========================================
    4. CHAPTER HEADINGS & THEME OVERRIDES
    ========================================= */
-[class*="theme-"] > h2 {
+[class*="theme-"] h2 {
   font-family: var(--font-display);
+  font-size: 2.2rem; 
+  color: #ffffff;
+  background-color: var(--theme-heading); 
+  padding: 1rem 2.5rem; 
+  border-radius: 50px; 
+  display: table; 
+  margin: 6rem auto 2rem auto; 
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.1); /* A hard shadow gives it a physical "sticker" feel */
+  position: relative;
   text-align: center;
-  color: var(--theme-heading); 
-  margin-top: 8rem; 
-  margin-bottom: 3rem;
-  font-size: 2.5rem; 
+  z-index: 10; 
+  margin: 10rem auto 0 auto;
+}
+
+[class*="theme-"] h2 + .book-stream {
+margin-top: -2.25rem; 
+padding-top: 2.25rem; 
 }
 
 /* Target the summary specifically to beat global.css */
@@ -152,6 +162,11 @@ summary {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
+
+  .book-toggle {
+    margin-left: -1.5rem;
+    margin-right: -1.5rem;
+  }
   
   .book-grid {
     grid-template-columns: repeat(2, 1fr); 
@@ -174,5 +189,17 @@ summary {
   .book-stream details .book-grid {
     padding-top: 1rem; 
     padding-bottom: 2rem;
+  }
+  [class*="theme-"] h2 {
+    font-size: 1.6rem; /* Make the text smaller */
+    padding: 0.8rem 1.5rem; 
+    margin: 8rem auto 0 auto;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  [class*="theme-"] h2 + .book-stream {
+  margin-top: -2.25rem; 
+  padding-top: 2.25rem; 
   }
 }
