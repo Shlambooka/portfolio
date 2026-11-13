@@ -1,5 +1,6 @@
+/*#region TOKENS */
 :root {
-/* Colours */
+  /* Colours */
   --color-pink:            hsl(342, 96%, 64%);
   --color-pink-dark:       hsl(342, 81%, 41%);
   --color-pink-hint:       hsl(342, 100%, 97%);
@@ -23,14 +24,8 @@
   --color-slate:           #5a727b;
   --color-slate-a20:       rgba(90, 114, 123, 0.2);
   --color-slate-a30:       rgba(90, 114, 123, 0.3);
-
-
-
-
   --color-ink:             #222b2e;
-
   --color-bg-dark:         #251e1a;
-
 
   /* Fonts */
   --font-display: 'Bevan', serif;
@@ -40,11 +35,14 @@
   /* Shape */
   --radius-bubble: 2cqw;
 }
+/*#endregion TOKENS */
 
 /*#region BODY & GLOBAL */
-html {
-  scroll-behavior: smooth;
-}
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
 
 body {
   font-family: var(--font-body);
@@ -73,33 +71,20 @@ a {
 }
 
 a:hover,
-a:focus-visible {
-  color: black;
-}
+a:focus-visible { color: black; }
 
 .page-column {
-  max-width: 1600px;
+  max-width: 1200px;
   margin: 0 auto;
   flex: 1;
   width: 100%;
   background-color: white;
 }
 
-.page-column-home {
-  background-color: var(--color-green);
-}
-
-.page-column-learning {
-  background-color: var(--color-navy);
-}
-
-.page-column-awards {
-  background-color: var(--color-navy);
-}
-
-.page-column-resume {
-  background-color: white;
-}
+.page-column-home    { background-color: var(--color-green); }
+.page-column-learning { background-color: var(--color-navy); }
+.page-column-awards   { background-color: var(--color-navy); }
+.page-column-resume   { background-color: white; }
 /*#endregion BODY & GLOBAL */
 
 /*#region NAV BAR */
@@ -123,16 +108,9 @@ nav a {
   display: block;
 }
 
-nav a:hover {
-  background-color: var(--color-slate-a20);
-}
+nav a:hover        { background-color: var(--color-slate-a20); }
+nav a.active       { background-color: var(--color-slate-a30); }
 
-nav a.active {
-  background-color: var(--color-slate-a30);
-}
-
-
-/* Hamburger */
 .menu-toggle {
   display: none;
   background: none;
@@ -173,20 +151,11 @@ nav a.active {
   position: relative;
   z-index: 10;
 }
-.page-knowledge .portfolio {
-    margin-top: -10cqw;
-}
-.page-design .portfolio {
-    margin-top: -14cqw;
-}
-.page-column-design .portfolio {
-  position: relative;
-  z-index: 30;
-}
+.page-knowledge .portfolio    { margin-top: -10cqw; }
+.page-design .portfolio       { margin-top: -14cqw; }
+.page-awards .portfolio       { margin-top: -8cqw; }
+.page-column-design .portfolio { position: relative; z-index: 30; }
 
-.page-awards .portfolio {
-    margin-top: -8cqw;
-}
 .portfolio h1 {
   font-family: var(--font-display);
   color: var(--color-orange);
@@ -200,7 +169,6 @@ nav a.active {
   font-size: 1.5rem;
   text-align: center;
 }
-
 .portfolio h3 {
   font-family: var(--font-ui);
   font-weight: 100;
@@ -208,7 +176,6 @@ nav a.active {
   text-align: center;
   font-size: 1.5rem;
 }
-
 .portfolio > p {
   font-family: var(--font-ui);
   color: var(--color-slate);
@@ -218,11 +185,9 @@ nav a.active {
   font-size: 1.1rem;
   line-height: 1.6;
 }
-
 /*#endregion PORTFOLIO SHELL */
 
 /*#region SHOW MORE/LESS BUTTONS */
-
 summary.toggle-button {
   display: block;
   text-align: center;
@@ -231,57 +196,38 @@ summary.toggle-button {
   font-weight: 600;
   margin-top: 1.5rem;
   margin-bottom: -0.5rem;
-  list-style: none; 
+  list-style: none;
 }
-
-summary.toggle-button::-webkit-details-marker {
-  display: none;
-}
+summary.toggle-button::-webkit-details-marker { display: none; }
 
 summary.toggle-button:hover .closed-text,
-summary.toggle-button:hover .open-text {
-  color: var(--color-pink-dark); 
-}
+summary.toggle-button:hover .open-text { color: var(--color-pink-dark); }
 
-.open-text {
-  display: none;
-}
+.open-text { display: none; }
 
-/* This allows the button to appear BELOW the grid */
 details {
   display: flex;
   flex-direction: column;
 }
-
-/* Puts the button visually at the bottom */
 details summary {
   order: 2;
-  margin-top: 2rem; 
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
-
-/* This targets ANY grid inside the details, not just books */
 details .book-grid,
 details .design-grid {
-  order: 1; 
+  order: 1;
   margin-top: 2rem;
 }
 
-/* State changes */
-details[open] .closed-text {
-  display: none;
-}
-
-details[open] .open-text {
-  display: inline-block;
-}
-
+details[open] .closed-text { display: none; }
+details[open] .open-text   { display: inline-block; }
 /*#endregion SHOW MORE/LESS BUTTONS */
 
 /*#region FOOTER */
 footer {
   position: relative;
-  padding: 2rem 1rem 6rem;  
+  padding: 2rem 1rem 6rem;
   text-align: center;
 }
 .footer-frog {
@@ -289,9 +235,9 @@ footer {
   position: absolute;
   bottom: 30%;
   left: 75%;
-  transform: translateX(-50%);  
-  width: 20cqw; 
-  pointer-events: none; 
+  transform: translateX(-50%);
+  width: 20cqw;
+  pointer-events: none;
 }
 footer p {
   margin: 0;
@@ -301,38 +247,28 @@ footer p {
 }
 /*#endregion FOOTER */
 
+/*#region MEDIA QUERIES */
 @media (max-width: 850px) {
   .menu-toggle {
     display: block;
     width: 100%;
   }
-  nav ul {
-    display: none;
-  }
+  nav ul { display: none; }
   nav.open ul {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  background-color: var(--color-turquoise-a95);
-  padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-turquoise-a95);
+    padding: 10px 0;
   }
-  nav.open a {
-  text-align: center;
-  }
-  .portfolio {
-    margin-top: -4cqw; 
-  }
-  .page-knowledge .portfolio {
-    margin-top: -60cqw;
-  }
-  .page-design .portfolio {
-      margin-top: -5cqw;
-  }
-  .page-awards .portfolio {
-    margin-top: -50cqw;
-  }
+  nav.open a { text-align: center; }
 
+  .portfolio                    { margin-top: -4cqw; }
+  .page-knowledge .portfolio    { margin-top: -60cqw; }
+  .page-design .portfolio       { margin-top: -5cqw; }
+  .page-awards .portfolio       { margin-top: -50cqw; }
 }
+/*#endregion MEDIA QUERIES */

@@ -4,6 +4,7 @@
   max-width: 1600px;
   margin: 0 auto;
   container-type: inline-size;
+  overflow: hidden;
 }
 
 .scene-bg {
@@ -106,9 +107,9 @@
   margin-top: 1em;
 }
 .page-home .speech-bubble {
-  top: 40%;
-  left: 28%;
-  width: 30%;
+  top: 39%;
+  left: 16%;
+  width: 39.5%;
   font-size: 1.6cqw;
 }
 .page-home .speech-bubble::after {

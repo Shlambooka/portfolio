@@ -3,24 +3,29 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nicole Nascimento</title>
-  <link rel="stylesheet" href="css/global.css">
-  <link rel="stylesheet" href="css/narrative.css">
-  <link rel="stylesheet" href="css/welcome-headline.css">
-  <script src="js/nav.js" defer></script>
+  <title>Nicole Nascimento — Visual Communicator</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bevan:ital@0;1&family=Open+Sans:wght@100;200;300;400;600;700&family=Questrial&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/narrative.css">
+  <link rel="stylesheet" href="css/welcome-headline.css">
+
+  <script src="js/nav.js" defer></script>
 </head>
 <body class="page-home">
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <header>
-    <button class="menu-toggle" aria-label="Menu" aria-expanded="false" aria-haspopup="true">
-        <span></span>
-        <span></span>
-        <span></span>
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav">
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
-    <nav>
+    <nav id="primary-nav" aria-label="Primary">
       <ul>
         <li><a href="index.html" class="active" aria-current="page">Home</a></li>
         <li><a href="learning.html">Learning</a></li>
@@ -35,44 +40,53 @@
 
   <div class="page-column page-column-home">
     <main id="main-content">
-    
+
       <section class="scene" aria-label="Welcome scene">
-       <picture>
-          <source 
-            media="(max-width: 850px)" 
+        <picture>
+          <source
+            media="(max-width: 850px)"
             srcset="images/scenes/scene-home-mobile-750.png 750w,
                     images/scenes/scene-home-mobile-1125.png 1125w"
             sizes="100vw">
-          <img 
+          <img
             src="images/scenes/scene-home-1600.png"
             srcset="images/scenes/scene-home-1600.png 1600w,
                     images/scenes/scene-home-3200.png 3200w"
-            sizes="(max-width: 1600px) 100vw, 1600px"
+            sizes="(max-width: 1200px) 100vw, 1200px"
             alt="Illustrated landscape with rolling hills, a character, and a hole with a ladder."
             class="scene-bg"
-            width="1600" 
+            width="1600"
             height="1600">
         </picture>
+
         <h1 class="welcome-headline">
-          <span class="w-hi">Hi! </span>
-          <span class="w-name"> My name is</span>
+          <span class="w-hi">Hi!</span>
+          <span class="w-name">My name is</span>
           <span class="w-nicole">NICOLE.</span>
-          <span class="w-iam">I am a </span>
-          <span class="w-title"> Visual Communicator.</span>
+          <span class="w-title">LXD & Instructional Designer</span>
         </h1>
-        <img src="images//characters/character-home-nicole.svg" alt="" class="scene-character">
+
+        <img
+          src="images/characters/character-home-nicole.svg"
+          alt=""
+          class="scene-character"
+          aria-hidden="true">
+
         <div class="speech-bubble">
           <p>
-            <span class="bubble-quote">“</span> I turn complex information into immersive, accessible learning experiences.
+            <span class="bubble-quote" aria-hidden="true">“</span>
+            With an MSc in Biomedical Communications, I turn complex, dry information into immersive, accessible learning experiences. The best learning is playful.
           </p>
           <p>
-            Let's jump into it! <span class="bubble-quote">”</span>
+            Let's jump into my portfolio!
+            <span class="bubble-quote" aria-hidden="true">”</span>
           </p>
         </div>
+
         <a href="learning.html" class="scene-button button-learning" aria-label="Go to Learning">
-          <span class="arrow">➜</span>
+          <span class="arrow" aria-hidden="true">➜</span>
         </a>
-        <span class="try-me" aria-hidden="true">TRY ME!</span>
+        <span class="try-me" aria-hidden="true">JUMP IN!</span>
       </section>
 
       <section class="portfolio">
@@ -85,7 +99,6 @@
       <p>&copy; 2026 Nicole Nascimento</p>
     </footer>
   </div>
-
 
 </body>
 </html>
